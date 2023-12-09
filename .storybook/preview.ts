@@ -11,6 +11,10 @@ export default {
           name: "neutral-0",
           value: "oklch(var(--color-neutral-0))",
         },
+        {
+          name: "neutral-1",
+          value: "oklch(var(--color-neutral-1))",
+        },
       ],
       grid: {
         cellSize: 8,
