@@ -24,12 +24,12 @@ jobs:
       - run: pnpm run build
       - run: pnpm run lint
       - run: pnpm run --if-present test
-      - if: ${{ github.ref == 'refs/heads/main' }}
-        uses: changesets/action@v1
-        with:
-          publish: pnpm exec changeset publish
-          commit: "chore: release"
-          title: "chore: release"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - if: ${{ github.ref == 'refs/heads/main' }}
+      #   uses: changesets/action@v1
+      #   with:
+      #     publish: pnpm exec changeset publish
+      #     commit: "chore: release"
+      #     title: "chore: release"
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
