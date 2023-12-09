@@ -1,0 +1,7 @@
+@import "../src/styles.css";
+
+@layer base {
+  body {
+    @apply text-xs text-ui-neutral-2;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "isolatedModules": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "verbatimModuleSyntax": true,
+    "jsx": "preserve",
+    "declaration": true,
+    "declarationMap": true,
+    "incremental": true
+  },
+  "include": ["**/*.js", "**/*.jsx", "**/*.cjs", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules/", "dist/", "storybook-static/"]
+}

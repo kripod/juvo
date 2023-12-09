@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "extends": [
+    "@wise/eslint-config/base-strict",
+    "@wise/eslint-config/typescript-strict",
+    "@wise/eslint-config/react",
+    "@wise/eslint-config/storybook",
+    "plugin:tailwindcss/recommended"
+  ]
+}

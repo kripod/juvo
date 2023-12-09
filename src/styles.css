@@ -1,0 +1,12 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@layer base {
+  html {
+    @apply theme-light bg-ui-neutral-0 text-ui-neutral-5 dark:theme-dark;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
