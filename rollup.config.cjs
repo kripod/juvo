@@ -10,6 +10,7 @@ const outDir = "dist";
 module.exports = defineConfig({
   input: {
     mod: `${rootDir}/mod.ts`,
+    "tailwind-preset": `${rootDir}/tailwind-preset.ts`,
   },
   output: [
     {

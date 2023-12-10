@@ -1,43 +1,8 @@
-import colors from "@evilmartians/harmony/tailwind";
 import type { Config } from "tailwindcss";
-import defaultTheme from "tailwindcss/defaultTheme";
-import plugin from "tailwindcss/plugin";
 
-import { darkTheme, lightTheme } from "./themes";
+import tailwindPreset from "./src/tailwind-preset";
 
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  future: {
-    hoverOnlyWhenSupported: true,
-    respectDefaultRingColorOpacity: true,
-    disableColorOpacityUtilitiesByDefault: true,
-    relativeContentPathsByDefault: true,
-  },
-  theme: {
-    colors,
-    extend: {
-      borderColor: ({ theme }) => ({
-        DEFAULT: theme("colors.ui.neutral-2") as string,
-      }),
-      colors: {
-        ui: Object.fromEntries(
-          Object.entries(lightTheme).map(([key, value]) => [
-            key.slice("--color-".length),
-            `oklch(var(${key}, ${value}) / <alpha-value>)`,
-          ]),
-        ),
-      },
-      transitionTimingFunction: {
-        DEFAULT: defaultTheme.transitionTimingFunction.out,
-      },
-    },
-  },
-  plugins: [
-    plugin(({ addComponents }) => {
-      addComponents({
-        ".theme-light": lightTheme,
-        ".theme-dark": darkTheme,
-      });
-    }),
-  ],
+  presets: [tailwindPreset],
 } satisfies Config;

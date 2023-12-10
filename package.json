@@ -15,7 +15,10 @@
     "*.css"
   ],
   "type": "module",
-  "exports": "./dist/mod.js",
+  "exports": {
+    ".": "./dist/mod.js",
+    "./tailwind-preset": "./dist/tailwind-preset.js"
+  },
   "files": [
     "dist/",
     "src/",
