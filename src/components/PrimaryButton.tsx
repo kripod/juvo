@@ -30,7 +30,7 @@ export const PrimaryButton = forwardRefWithGenerics(function PrimaryButton<
       }
       className={clsx(
         className,
-        "inline-flex h-10 items-center justify-center rounded-lg bg-ui-primary-3 px-4 text-center text-base font-semibold leading-none text-ui-neutral-0 transition-colors hover:bg-ui-primary-4",
+        "inline-flex h-10 items-center justify-center rounded-lg bg-ui-primary-3 px-4 text-center text-base font-semibold leading-none text-ui-primary-0 transition-colors hover:bg-ui-primary-4",
       )}
       {...props}
     />

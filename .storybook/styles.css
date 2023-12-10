@@ -2,6 +2,6 @@
 
 @layer base {
   body {
-    @apply text-xs text-ui-neutral-2;
+    @apply text-xs text-ui-neutral-3;
   }
 }
