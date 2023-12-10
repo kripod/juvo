@@ -8,7 +8,7 @@ export function Alert({ children }: AlertProps) {
   return (
     <div
       role="alert"
-      className="grid grid-cols-[auto_1fr] gap-x-2 rounded-2xl border border-ui-primary-2 bg-ui-primary-1 p-4 text-base text-ui-primary-5"
+      className="grid grid-cols-[auto_1fr] gap-x-2 rounded-2xl border border-ui-neutral-2 bg-ui-neutral-1 p-4 text-base text-ui-neutral-5"
     >
       <InformationCircleIcon className="h-6 w-6" />
       {children}
