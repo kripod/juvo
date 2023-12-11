@@ -1,8 +1,18 @@
 import "./styles.css";
 
-import type { Preview } from "@storybook/react";
+import { withThemeByClassName } from "@storybook/addon-themes";
+import type { Preview, ReactRenderer } from "@storybook/react";
 
 export default {
+  decorators: [
+    withThemeByClassName<ReactRenderer>({
+      themes: {
+        light: "theme-light",
+        dark: "theme-dark",
+      },
+      defaultTheme: "light",
+    }),
+  ],
   parameters: {
     backgrounds: {
       default: "neutral-0",

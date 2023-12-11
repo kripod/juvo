@@ -5,4 +5,5 @@ import tailwindPreset from "./src/tailwind-preset";
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   presets: [tailwindPreset],
+  darkMode: ["class", ".theme-dark"],
 } satisfies Config;

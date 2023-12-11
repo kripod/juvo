@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    @apply theme-light bg-ui-neutral-0 text-ui-neutral-5 dark:theme-dark;
+    @apply bg-ui-neutral-0 text-ui-neutral-5;
     -webkit-tap-highlight-color: transparent;
   }
 }
