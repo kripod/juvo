@@ -7,9 +7,10 @@ function oklchCoords(color: string) {
 type ColorGroup = "primary" | "neutral" | "danger";
 type ColorLevel = 0 | 1 | 2 | 3 | 4 | 5;
 
-type ColorFamily<T extends ColorGroup> = {
-  [P in `--color-${T}-${ColorLevel}`]: string;
-};
+type ColorFamily<T extends ColorGroup> = Record<
+  `--color-${T}-${ColorLevel}`,
+  string
+>;
 
 interface Theme extends ColorFamily<ColorGroup> {}
 
