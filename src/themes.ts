@@ -4,7 +4,7 @@ function oklchCoords(color: string) {
   return color.replace(/^oklch\((.+)\)$/u, "$1");
 }
 
-type ColorGroup = "primary" | "neutral";
+type ColorGroup = "primary" | "neutral" | "danger";
 type ColorLevel = 0 | 1 | 2 | 3 | 4 | 5;
 
 type ColorFamily<T extends ColorGroup> = {
@@ -34,6 +34,13 @@ export const lightTheme = {
   "--color-neutral-3": oklchCoords(colors.zinc[colorL3.light]),
   "--color-neutral-4": oklchCoords(colors.zinc[colorL4.light]),
   "--color-neutral-5": oklchCoords(colors.zinc[colorL5.light]),
+
+  "--color-danger-0": oklchCoords(colors.red[colorL0.light]),
+  "--color-danger-1": oklchCoords(colors.red[colorL1.light]),
+  "--color-danger-2": oklchCoords(colors.red[colorL2.light]),
+  "--color-danger-3": oklchCoords(colors.red[colorL3.light]),
+  "--color-danger-4": oklchCoords(colors.red[colorL4.light]),
+  "--color-danger-5": oklchCoords(colors.red[colorL5.light]),
 } as const satisfies Theme;
 
 export const darkTheme = {
@@ -50,4 +57,11 @@ export const darkTheme = {
   "--color-neutral-3": oklchCoords(colors.zinc[colorL3.dark]),
   "--color-neutral-4": oklchCoords(colors.zinc[colorL4.dark]),
   "--color-neutral-5": oklchCoords(colors.zinc[colorL5.dark]),
+
+  "--color-danger-0": oklchCoords(colors.red[colorL0.dark]),
+  "--color-danger-1": oklchCoords(colors.red[colorL1.dark]),
+  "--color-danger-2": oklchCoords(colors.red[colorL2.dark]),
+  "--color-danger-3": oklchCoords(colors.red[colorL3.dark]),
+  "--color-danger-4": oklchCoords(colors.red[colorL4.dark]),
+  "--color-danger-5": oklchCoords(colors.red[colorL5.dark]),
 } as const satisfies Theme;
