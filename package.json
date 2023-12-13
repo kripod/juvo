@@ -68,7 +68,7 @@
     "@tsconfig/recommended": "1.0.3",
     "@types/babel__core": "7.20.5",
     "@types/node": "20.10.4",
-    "@types/react": "18.2.42",
+    "@types/react": "18.2.45",
     "@types/react-dom": "18.2.17",
     "@wise/eslint-config": "9.2.1",
     "babel-plugin-optimize-clsx": "2.6.2",
