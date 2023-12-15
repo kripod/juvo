@@ -22,12 +22,12 @@ const colorL4 = { light: 700, dark: 300 } as const;
 const colorL5 = { light: 800, dark: 200 } as const;
 
 export const lightTheme = {
-  "--color-primary-0": oklchCoords(colors.blue[colorL0.light]),
-  "--color-primary-1": oklchCoords(colors.blue[colorL1.light]),
-  "--color-primary-2": oklchCoords(colors.blue[colorL2.light]),
-  "--color-primary-3": oklchCoords(colors.blue[colorL3.light]),
-  "--color-primary-4": oklchCoords(colors.blue[colorL4.light]),
-  "--color-primary-5": oklchCoords(colors.blue[colorL5.light]),
+  "--color-primary-0": oklchCoords(colors.cyan[colorL0.light]),
+  "--color-primary-1": oklchCoords(colors.cyan[colorL1.light]),
+  "--color-primary-2": oklchCoords(colors.cyan[colorL2.light]),
+  "--color-primary-3": oklchCoords(colors.cyan[colorL3.light]),
+  "--color-primary-4": oklchCoords(colors.cyan[colorL4.light]),
+  "--color-primary-5": oklchCoords(colors.cyan[colorL5.light]),
 
   "--color-neutral-0": oklchCoords(colors.zinc[colorL0.light]),
   "--color-neutral-1": oklchCoords(colors.zinc[colorL1.light]),
@@ -52,12 +52,12 @@ export const lightTheme = {
 } as const satisfies Theme;
 
 export const darkTheme = {
-  "--color-primary-0": oklchCoords(colors.blue[colorL0.dark]),
-  "--color-primary-1": oklchCoords(colors.blue[colorL1.dark]),
-  "--color-primary-2": oklchCoords(colors.blue[colorL2.dark]),
-  "--color-primary-3": oklchCoords(colors.blue[colorL3.dark]),
-  "--color-primary-4": oklchCoords(colors.blue[colorL4.dark]),
-  "--color-primary-5": oklchCoords(colors.blue[colorL5.dark]),
+  "--color-primary-0": oklchCoords(colors.cyan[colorL0.dark]),
+  "--color-primary-1": oklchCoords(colors.cyan[colorL1.dark]),
+  "--color-primary-2": oklchCoords(colors.cyan[colorL2.dark]),
+  "--color-primary-3": oklchCoords(colors.cyan[colorL3.dark]),
+  "--color-primary-4": oklchCoords(colors.cyan[colorL4.dark]),
+  "--color-primary-5": oklchCoords(colors.cyan[colorL5.dark]),
 
   "--color-neutral-0": oklchCoords(colors.zinc[colorL0.dark]),
   "--color-neutral-1": oklchCoords(colors.zinc[colorL1.dark]),
