@@ -6,6 +6,7 @@
     "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode",
     "GitHub.vscode-github-actions",
+    "unifiedjs.vscode-mdx",
     "webben.browserslist"
   ]
 }
