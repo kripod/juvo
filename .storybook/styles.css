@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    /* Embrace defining text styles within components */
+    /* Embrace applying text styles within components */
     @apply text-xs text-ui-neutral-3;
   }
 }
