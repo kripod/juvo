@@ -1,14 +1,14 @@
 import { clsx } from "clsx";
 
 import { forwardRefWithGenerics } from "../utils/forwardRefWithGenerics";
-import type { Merge, ReactElementType } from "../utils/types";
+import type { Merge } from "../utils/types";
 
 interface PrimaryButtonElementProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export type PrimaryButtonElementType = ReactElementType<
+export type PrimaryButtonElementType = React.ElementType<
   PrimaryButtonElementProps,
   "button" | "a"
 >;
