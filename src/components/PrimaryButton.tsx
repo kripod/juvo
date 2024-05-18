@@ -42,11 +42,11 @@ export const PrimaryButton = forwardRefWithGenerics(function PrimaryButton<
       className={clsx(
         className,
         {
-          "h-8 px-3 text-sm leading-none": size === "sm",
-          "h-10 px-4 text-base leading-none": size === "md",
-          "h-14 px-6 text-xl leading-none": size === "lg",
+          "h-8 px-3 text-sm/none": size === "sm",
+          "h-10 px-4 text-base/none": size === "md",
+          "h-14 px-6 text-xl/none": size === "lg",
         },
-        "inline-flex items-center justify-center rounded-lg bg-ui-primary-3 text-center font-semibold text-ui-primary-0 transition-colors hover:bg-ui-primary-4",
+        "inline-flex items-center justify-center rounded-lg bg-ui-primary-3 text-center text-ui-primary-0 transition-colors hover:bg-ui-primary-4",
       )}
       {...props}
     />
