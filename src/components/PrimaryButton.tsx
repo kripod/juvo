@@ -37,7 +37,7 @@ export const PrimaryButton = forwardRefWithGenerics(function PrimaryButton<
       className={clsx(
         className,
         {
-          "h-8 rounded-md px-3 text-sm/none": size === "sm",
+          "h-8 rounded-md px-2.5 text-sm/none": size === "sm",
           "h-10 rounded-lg px-4 text-base/none": size === "md",
           "h-14 rounded-xl px-6 text-xl/none": size === "lg",
         },
