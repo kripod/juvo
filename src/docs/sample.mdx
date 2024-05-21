@@ -1,10 +1,24 @@
+import { Unstyled } from "@storybook/blocks";
+
 import { Alert } from "../components/Alert";
 import { PrimaryButton } from "../components/PrimaryButton";
 
-<div className="space-y-4 text-base text-ui-neutral-5">
-  <Alert sentiment="danger">This is an alert.</Alert>
-  <Alert sentiment="warning">This is an alert.</Alert>
-  <Alert>This is an alert.</Alert>
-  <div>This is just a block of text.</div>
-  <PrimaryButton>Button</PrimaryButton>
-</div>
+<Unstyled>
+  <div className="space-y-4 text-base text-ui-neutral-5">
+    <Alert sentiment="danger">This is an alert.</Alert>
+    <Alert sentiment="warning">This is an alert.</Alert>
+    <Alert>
+      <div className="flex flex-col items-start gap-y-3">
+        An alert displays a brief, important message, usually at the top of a
+        page. Only text content updates are conveyed to screen readers,
+        preserving focus.
+        <div className="flex flex-wrap gap-3">
+          <PrimaryButton size="sm">Ok</PrimaryButton>
+          <PrimaryButton size="sm">Cancel</PrimaryButton>
+        </div>
+      </div>
+    </Alert>
+    <div>This is just a block of text.</div>
+    <PrimaryButton>Button</PrimaryButton>
+  </div>
+</Unstyled>
