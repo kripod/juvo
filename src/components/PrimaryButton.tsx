@@ -3,22 +3,19 @@ import { clsx } from "clsx";
 import { forwardRefWithGenerics } from "../utils/forwardRefWithGenerics";
 import type { Merge } from "../utils/types";
 
-interface PrimaryButtonElementProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export type PrimaryButtonElementType = React.ElementType<
-  PrimaryButtonElementProps,
+type PrimaryButtonElementType = React.ElementType<
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  any,
   "button" | "a"
 >;
 
 export type PrimaryButtonProps<T extends PrimaryButtonElementType = "button"> =
   Merge<
-    React.ComponentPropsWithoutRef<T>,
+    React.ComponentPropsWithoutRef<T> & { as?: never },
     {
       as?: T;
       size?: "sm" | "md" | "lg";
+      className?: string;
     }
   >;
 
@@ -36,9 +33,7 @@ export const PrimaryButton = forwardRefWithGenerics(function PrimaryButton<
   const Element: PrimaryButtonElementType = as;
   return (
     <Element
-      ref={
-        ref as React.ForwardedRef<React.ElementRef<PrimaryButtonElementType>>
-      }
+      ref={ref}
       className={clsx(
         className,
         {

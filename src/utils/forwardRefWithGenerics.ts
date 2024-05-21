@@ -1,7 +1,9 @@
 import { forwardRef } from "react";
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-export const forwardRefWithGenerics = forwardRef as <T, P = {}>(
+export const forwardRefWithGenerics = forwardRef as <
+  T,
+  P = NonNullable<unknown>,
+>(
   render: (
     props: P,
     ref: React.ForwardedRef<T>,
