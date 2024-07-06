@@ -20,26 +20,26 @@ jobs:
       - run: pnpm run lint
       - run: pnpm run --if-present test
 
-  release-latest:
-    name: Release latest version
-    needs: [build-lint-test]
-    if: ${{ github.ref == 'refs/heads/main' }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      id-token: write
-      pull-requests: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ./.github/actions/bootstrap
-        with:
-          npm-token: ${{ secrets.NPM_TOKEN }}
-      - run: pnpm run build
-      - name: Create release PR or publish to npm
-        uses: changesets/action@v1
-        with:
-          publish: pnpm exec changeset publish
-          commit: "chore: release"
-          title: "chore: release"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # release-latest:
+  #   name: Release latest version
+  #   needs: [build-lint-test]
+  #   if: ${{ github.ref == 'refs/heads/main' }}
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: write
+  #     id-token: write
+  #     pull-requests: write
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: ./.github/actions/bootstrap
+  #       with:
+  #         npm-token: ${{ secrets.NPM_TOKEN }}
+  #     - run: pnpm run build
+  #     - name: Create release PR or publish to npm
+  #       uses: changesets/action@v1
+  #       with:
+  #         publish: pnpm exec changeset publish
+  #         commit: "chore: release"
+  #         title: "chore: release"
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
