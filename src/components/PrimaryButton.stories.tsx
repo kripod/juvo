@@ -5,7 +5,6 @@ import { PrimaryButton, type PrimaryButtonProps } from "./PrimaryButton";
 // TODO: Refactor without generics
 const meta: Meta<PrimaryButtonProps> = {
   component: PrimaryButton,
-  tags: ["autodocs"],
 };
 
 export default meta;
