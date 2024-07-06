@@ -16,9 +16,19 @@
   ],
   "type": "module",
   "exports": {
-    ".": "./dist/mod.js",
-    "./tailwind-preset": "./dist/tailwind-preset.js"
+    ".": {
+      "types": "./dist/mod.d.ts",
+      "default": "./dist/mod.js"
+    },
+    "./styles/base.css": "./dist/styles/base.css",
+    "./styles/pregenerated.css": "./dist/styles/pregenerated.css",
+    "./tailwind-preset": {
+      "types": "./dist/tailwind-preset.d.ts",
+      "default": "./dist/tailwind-preset.js"
+    }
   },
+  "module": "./dist/mod.js",
+  "types": "./dist/mod.d.ts",
   "files": [
     "dist/",
     "src/"
@@ -26,35 +36,28 @@
   "scripts": {
     "prepare": "husky",
     "dev": "storybook dev --port 6006",
-    "build": "npm-run-all --parallel build:*",
-    "build:lib": "rollup --config --sourcemap",
-    "build:lib:watch": "pnpm run build:lib --watch",
-    "build:stories": "storybook build",
+    "build": "pnpm run \"/^build:[^:]+$/\"",
+    "build:lib": "pnpm run \"/^build:lib:.+(?<!:watch)$/\"",
+    "build:lib:css": "postcss src/styles/ --base src/ --dir dist/",
+    "build:lib:js": "vite build",
+    "build:stories": "NO_DTS=true storybook build --stats-json",
     "clean": "git clean --interactive -dx --exclude node_modules/ --exclude .husky/",
-    "lint": "npm-run-all --parallel lint:js+ts lint:format lint:types",
-    "lint:js+ts": "eslint --ext .js,.jsx,.cjs,.ts,.tsx --ignore-path .gitignore .",
+    "lint": "pnpm run \"/^lint:(?!fix)/\"",
+    "lint:js+ts": "eslint --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore .",
     "lint:format": "prettier --check .",
     "lint:types": "tsc --noEmit",
-    "lint:fix": "npm-run-all --serial lint:fix:*",
+    "lint:fix": "pnpm run \"/^lint:fix:/\"",
     "lint:fix:js+ts": "pnpm run lint:js+ts --fix",
     "lint:fix:format": "prettier --write ."
   },
   "dependencies": {
-    "@babel/runtime": "^7.24.7",
+    "@heroicons/react": "^2.1.4",
     "clsx": "^2.1.1"
   },
   "devDependencies": {
-    "@babel/core": "7.24.7",
-    "@babel/plugin-transform-runtime": "7.24.7",
-    "@babel/preset-env": "7.24.7",
-    "@babel/preset-react": "7.24.7",
-    "@babel/preset-typescript": "7.24.7",
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.7",
     "@evilmartians/harmony": "1.2.0",
-    "@heroicons/react": "2.1.4",
-    "@rollup/plugin-babel": "6.0.4",
-    "@rollup/plugin-typescript": "11.1.6",
     "@storybook/addon-a11y": "8.1.11",
     "@storybook/addon-essentials": "8.1.11",
     "@storybook/addon-interactions": "8.1.11",
@@ -64,36 +67,42 @@
     "@storybook/react-vite": "8.1.11",
     "@storybook/test": "8.1.11",
     "@total-typescript/tsconfig": "1.0.4",
-    "@types/babel__core": "7.20.5",
     "@types/node": "20.14.10",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "@vitejs/plugin-react-swc": "3.7.0",
     "@wise/eslint-config": "11.2.0",
-    "babel-plugin-optimize-clsx": "2.6.2",
     "eslint": "8.57.0",
+    "eslint-plugin-react-refresh": "0.4.7",
     "eslint-plugin-tailwindcss": "3.17.4",
     "husky": "9.0.11",
     "nano-staged": "0.8.0",
-    "npm-run-all": "4.1.5",
-    "postcss-import": "16.1.0",
+    "postcss": "8.4.39",
+    "postcss-cli": "11.0.0",
     "postcss-preset-env": "9.5.16",
     "prettier": "3.3.2",
     "prettier-plugin-tailwindcss": "0.6.5",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "rollup": "4.18.0",
+    "rollup-preserve-directives": "1.1.1",
     "storybook": "8.1.11",
     "tailwindcss": "3.4.4",
     "typescript": "5.5.3",
-    "vite": "5.3.3"
+    "vite": "5.3.3",
+    "vite-plugin-dts": "3.9.1"
   },
   "peerDependencies": {
+    "@evilmartians/harmony": "^1",
+    "@heroicons/react": "^2.1",
     "react": ">=18",
     "react-dom": ">=18",
-    "typescript": ">=4.5"
+    "tailwindcss": "^3.4",
+    "typescript": ">=5.4"
   },
   "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    },
     "typescript": {
       "optional": true
     }

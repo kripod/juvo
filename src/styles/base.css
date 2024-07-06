@@ -1,0 +1,4 @@
+html {
+  @apply bg-ui-neutral-0 text-ui-neutral-5;
+  -webkit-tap-highlight-color: transparent;
+}

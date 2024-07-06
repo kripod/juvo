@@ -6,6 +6,7 @@
     "@wise/eslint-config/storybook",
     "plugin:tailwindcss/recommended"
   ],
+  "plugins": ["react-refresh"],
   "settings": {
     "jsx-a11y": {
       "polymorphicPropName": "as",
@@ -13,5 +14,11 @@
         "PrimaryButton": "button"
       }
     }
+  },
+  "rules": {
+    "react-refresh/only-export-components": [
+      "warn",
+      { "allowConstantExport": true }
+    ]
   }
 }
