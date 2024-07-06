@@ -1,5 +1,5 @@
 const { babel } = require("@rollup/plugin-babel");
-const typescript = require("@rollup/plugin-typescript");
+const { default: typescript } = require("@rollup/plugin-typescript");
 const { defineConfig } = require("rollup");
 
 const pkg = require("./package.json");
