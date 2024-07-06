@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ButtonPrimary, type ButtonPrimaryProps } from "./ButtonPrimary";
+import { ButtonPrimary } from "./ButtonPrimary";
 
-// TODO: Refactor without generics
-const meta: Meta<ButtonPrimaryProps> = {
+const meta = {
   component: ButtonPrimary,
-};
+} satisfies Meta<typeof ButtonPrimary>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
