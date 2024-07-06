@@ -4,7 +4,7 @@ function oklchCoords(color: string) {
   return color.replace(/^oklch\((.+)\)$/u, "$1");
 }
 
-type ColorGroup = "primary" | "neutral" | "info" | "warning" | "danger";
+type ColorGroup = "primary" | "neutral" | "info" | "danger" | "warning";
 type ColorLevel = 0 | 1 | 2 | 3 | 4 | 5;
 
 type ColorFamily<T extends ColorGroup> = Record<
@@ -43,19 +43,19 @@ export const lightTheme = {
   "--color-info-4": oklchCoords(colors.blue[colorL4.light]),
   "--color-info-5": oklchCoords(colors.blue[colorL5.light]),
 
-  "--color-warning-0": oklchCoords(colors.yellow[colorL0.light]),
-  "--color-warning-1": oklchCoords(colors.yellow[colorL1.light]),
-  "--color-warning-2": oklchCoords(colors.yellow[colorL2.light]),
-  "--color-warning-3": oklchCoords(colors.yellow[colorL3.light]),
-  "--color-warning-4": oklchCoords(colors.yellow[colorL4.light]),
-  "--color-warning-5": oklchCoords(colors.yellow[colorL5.light]),
-
   "--color-danger-0": oklchCoords(colors.red[colorL0.light]),
   "--color-danger-1": oklchCoords(colors.red[colorL1.light]),
   "--color-danger-2": oklchCoords(colors.red[colorL2.light]),
   "--color-danger-3": oklchCoords(colors.red[colorL3.light]),
   "--color-danger-4": oklchCoords(colors.red[colorL4.light]),
   "--color-danger-5": oklchCoords(colors.red[colorL5.light]),
+
+  "--color-warning-0": oklchCoords(colors.yellow[colorL0.light]),
+  "--color-warning-1": oklchCoords(colors.yellow[colorL1.light]),
+  "--color-warning-2": oklchCoords(colors.yellow[colorL2.light]),
+  "--color-warning-3": oklchCoords(colors.yellow[colorL3.light]),
+  "--color-warning-4": oklchCoords(colors.yellow[colorL4.light]),
+  "--color-warning-5": oklchCoords(colors.yellow[colorL5.light]),
 } as const satisfies Theme;
 
 export const darkTheme = {
@@ -80,17 +80,17 @@ export const darkTheme = {
   "--color-info-4": oklchCoords(colors.blue[colorL4.dark]),
   "--color-info-5": oklchCoords(colors.blue[colorL5.dark]),
 
-  "--color-warning-0": oklchCoords(colors.yellow[colorL0.dark]),
-  "--color-warning-1": oklchCoords(colors.yellow[colorL1.dark]),
-  "--color-warning-2": oklchCoords(colors.yellow[colorL2.dark]),
-  "--color-warning-3": oklchCoords(colors.yellow[colorL3.dark]),
-  "--color-warning-4": oklchCoords(colors.yellow[colorL4.dark]),
-  "--color-warning-5": oklchCoords(colors.yellow[colorL5.dark]),
-
   "--color-danger-0": oklchCoords(colors.red[colorL0.dark]),
   "--color-danger-1": oklchCoords(colors.red[colorL1.dark]),
   "--color-danger-2": oklchCoords(colors.red[colorL2.dark]),
   "--color-danger-3": oklchCoords(colors.red[colorL3.dark]),
   "--color-danger-4": oklchCoords(colors.red[colorL4.dark]),
   "--color-danger-5": oklchCoords(colors.red[colorL5.dark]),
+
+  "--color-warning-0": oklchCoords(colors.yellow[colorL0.dark]),
+  "--color-warning-1": oklchCoords(colors.yellow[colorL1.dark]),
+  "--color-warning-2": oklchCoords(colors.yellow[colorL2.dark]),
+  "--color-warning-3": oklchCoords(colors.yellow[colorL3.dark]),
+  "--color-warning-4": oklchCoords(colors.yellow[colorL4.dark]),
+  "--color-warning-5": oklchCoords(colors.yellow[colorL5.dark]),
 } as const satisfies Theme;
