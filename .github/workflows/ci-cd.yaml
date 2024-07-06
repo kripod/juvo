@@ -41,3 +41,5 @@ jobs:
           publish: pnpm exec changeset publish
           commit: "chore: release"
           title: "chore: release"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
