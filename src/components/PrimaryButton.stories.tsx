@@ -1,13 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { PrimaryButton } from "./PrimaryButton";
+import { PrimaryButton, type PrimaryButtonProps } from "./PrimaryButton";
 
-const meta = {
+// TODO: Refactor without generics
+const meta: Meta<PrimaryButtonProps> = {
   component: PrimaryButton,
   tags: ["autodocs"],
-} satisfies Meta<typeof PrimaryButton>;
-export default meta;
+};
 
+export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Basic = {

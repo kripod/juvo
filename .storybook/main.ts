@@ -1,18 +1,20 @@
 import type { StorybookConfig } from "@storybook/react-vite";
 
 export default {
+  stories: ["../src/"],
   framework: {
     name: "@storybook/react-vite",
     options: {
       strictMode: true,
     },
   },
-  stories: ["../src/"],
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
+  },
   addons: [
-    "@storybook/addon-a11y",
     "@storybook/addon-essentials",
+    "@storybook/addon-a11y",
     "@storybook/addon-interactions",
-    "@storybook/addon-links",
     "@storybook/addon-themes",
   ],
 } satisfies StorybookConfig;

@@ -4,7 +4,7 @@ import {
   ExclamationTriangleIcon,
   InformationCircleIcon,
 } from "@heroicons/react/24/solid";
-import { clsx } from "clsx";
+import { clsx } from "clsx/lite";
 
 export interface AlertProps {
   sentiment?: "info" | "danger" | "success" | "warning";
@@ -24,17 +24,18 @@ export function Alert({ sentiment = "info", children }: AlertProps) {
   return (
     <div
       role="alert"
-      className={clsx("flex gap-x-2 rounded-2xl border p-4 text-base", {
-        "border-ui-info-2 bg-ui-info-1 text-ui-info-5": sentiment === "info",
-        "border-ui-danger-2 bg-ui-danger-1 text-ui-danger-5":
-          sentiment === "danger",
-        "border-ui-success-2 bg-ui-success-1 text-ui-success-5":
-          sentiment === "success",
-        "border-ui-warning-2 bg-ui-warning-1 text-ui-warning-5":
-          sentiment === "warning",
-      })}
+      className={clsx(
+        "flex gap-x-2 rounded-2xl border p-4 text-base",
+        sentiment === "info" && "border-ui-info-2 bg-ui-info-1 text-ui-info-5",
+        sentiment === "danger" &&
+          "border-ui-danger-2 bg-ui-danger-1 text-ui-danger-5",
+        sentiment === "success" &&
+          "border-ui-success-2 bg-ui-success-1 text-ui-success-5",
+        sentiment === "warning" &&
+          "border-ui-warning-2 bg-ui-warning-1 text-ui-warning-5",
+      )}
     >
-      <Icon className="h-6 w-6 flex-none" />
+      <Icon className="size-6 flex-none" />
       <div className="flex-1">{children}</div>
     </div>
   );

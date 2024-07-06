@@ -1,4 +1,4 @@
-import { clsx } from "clsx";
+import { clsx } from "clsx/lite";
 
 import { forwardRefWithGenerics } from "../utils/forwardRefWithGenerics";
 import type { Merge } from "../utils/types";
@@ -36,12 +36,10 @@ export const PrimaryButton = forwardRefWithGenerics(function PrimaryButton<
       ref={ref}
       className={clsx(
         className,
-        {
-          "h-8 rounded-md px-2.5 text-sm/none": size === "sm",
-          "h-10 rounded-lg px-4 text-base/none": size === "md",
-          "h-14 rounded-xl px-6 text-xl/none": size === "lg",
-        },
         "inline-flex items-center justify-center bg-ui-primary-3 text-center font-medium text-ui-primary-0 transition-colors hover:bg-ui-primary-4",
+        size === "sm" && "h-8 rounded-md px-2.5 text-sm/none",
+        size === "md" && "h-10 rounded-lg px-4 text-base/none",
+        size === "lg" && "h-14 rounded-xl px-6 text-xl/none",
       )}
       {...props}
     />
