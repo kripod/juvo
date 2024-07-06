@@ -1,8 +1,8 @@
 import {
   CheckCircleIcon,
+  ExclamationCircleIcon,
   ExclamationTriangleIcon,
   InformationCircleIcon,
-  XCircleIcon,
 } from "@heroicons/react/24/solid";
 import { clsx } from "clsx";
 
@@ -13,7 +13,7 @@ export interface AlertProps {
 
 const iconBySentiment = {
   info: InformationCircleIcon,
-  danger: XCircleIcon,
+  danger: ExclamationCircleIcon,
   success: CheckCircleIcon,
   warning: ExclamationTriangleIcon,
 } satisfies Record<NonNullable<AlertProps["sentiment"]>, React.ComponentType>;
