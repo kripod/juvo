@@ -3,13 +3,13 @@ import { clsx } from "clsx/lite";
 import { forwardRefWithGenerics } from "../utils/forwardRefWithGenerics";
 import type { Merge } from "../utils/types";
 
-type PrimaryButtonElementType = React.ElementType<
+type ButtonPrimaryElementType = React.ElementType<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   any,
   "button" | "a"
 >;
 
-export type PrimaryButtonProps<T extends PrimaryButtonElementType = "button"> =
+export type ButtonPrimaryProps<T extends ButtonPrimaryElementType = "button"> =
   Merge<
     React.ComponentPropsWithoutRef<T> & { as?: never },
     {
@@ -19,18 +19,18 @@ export type PrimaryButtonProps<T extends PrimaryButtonElementType = "button"> =
     }
   >;
 
-export const PrimaryButton = forwardRefWithGenerics(function PrimaryButton<
-  T extends PrimaryButtonElementType = "button",
+export const ButtonPrimary = forwardRefWithGenerics(function ButtonPrimary<
+  T extends ButtonPrimaryElementType = "button",
 >(
   {
     as = "button" as T,
     size = "md",
     className,
     ...props
-  }: PrimaryButtonProps<T>,
+  }: ButtonPrimaryProps<T>,
   ref: React.ForwardedRef<React.ElementRef<T>>,
 ) {
-  const Element: PrimaryButtonElementType = as;
+  const Element: ButtonPrimaryElementType = as;
   return (
     <Element
       ref={ref}

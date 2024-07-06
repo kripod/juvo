@@ -1,7 +1,7 @@
 import { Unstyled } from "@storybook/blocks";
 
 import { Alert } from "../components/Alert";
-import { PrimaryButton } from "../components/PrimaryButton";
+import { ButtonPrimary } from "../components/ButtonPrimary";
 
 <Unstyled>
   <div className="space-y-4 text-base text-ui-neutral-5">
@@ -11,8 +11,8 @@ import { PrimaryButton } from "../components/PrimaryButton";
         page. Only text content updates are conveyed to screen readers,
         preserving focus.
         <div className="flex flex-wrap gap-3">
-          <PrimaryButton>Ok</PrimaryButton>
-          <PrimaryButton>Cancel</PrimaryButton>
+          <ButtonPrimary>Ok</ButtonPrimary>
+          <ButtonPrimary>Cancel</ButtonPrimary>
         </div>
       </div>
     </Alert>
@@ -20,6 +20,6 @@ import { PrimaryButton } from "../components/PrimaryButton";
     <Alert sentiment="success">This is an alert.</Alert>
     <Alert sentiment="warning">This is an alert.</Alert>
     <div>This is just a block of text.</div>
-    <PrimaryButton>Button</PrimaryButton>
+    <ButtonPrimary>Button</ButtonPrimary>
   </div>
 </Unstyled>

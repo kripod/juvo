@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { PrimaryButton, type PrimaryButtonProps } from "./PrimaryButton";
+import { ButtonPrimary, type ButtonPrimaryProps } from "./ButtonPrimary";
 
 // TODO: Refactor without generics
-const meta: Meta<PrimaryButtonProps> = {
-  component: PrimaryButton,
+const meta: Meta<ButtonPrimaryProps> = {
+  component: ButtonPrimary,
 };
 
 export default meta;
@@ -19,9 +19,9 @@ export const Basic = {
 export const Sizes = {
   render: () => (
     <div className="flex flex-col items-start gap-y-4">
-      <PrimaryButton size="sm">Small</PrimaryButton>
-      <PrimaryButton size="md">Medium</PrimaryButton>
-      <PrimaryButton size="lg">Large</PrimaryButton>
+      <ButtonPrimary size="sm">Small</ButtonPrimary>
+      <ButtonPrimary size="md">Medium</ButtonPrimary>
+      <ButtonPrimary size="lg">Large</ButtonPrimary>
     </div>
   ),
 } satisfies Story;
