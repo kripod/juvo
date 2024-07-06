@@ -1,4 +1,5 @@
 import {
+  CheckCircleIcon,
   ExclamationTriangleIcon,
   InformationCircleIcon,
   XCircleIcon,
@@ -6,13 +7,14 @@ import {
 import { clsx } from "clsx";
 
 export interface AlertProps {
-  sentiment?: "info" | "danger" | "warning";
+  sentiment?: "info" | "danger" | "success" | "warning";
   children?: React.ReactNode;
 }
 
 const iconBySentiment = {
   info: InformationCircleIcon,
   danger: XCircleIcon,
+  success: CheckCircleIcon,
   warning: ExclamationTriangleIcon,
 } satisfies Record<NonNullable<AlertProps["sentiment"]>, React.ComponentType>;
 
@@ -26,6 +28,8 @@ export function Alert({ sentiment = "info", children }: AlertProps) {
         "border-ui-info-2 bg-ui-info-1 text-ui-info-5": sentiment === "info",
         "border-ui-danger-2 bg-ui-danger-1 text-ui-danger-5":
           sentiment === "danger",
+        "border-ui-success-2 bg-ui-success-1 text-ui-success-5":
+          sentiment === "success",
         "border-ui-warning-2 bg-ui-warning-1 text-ui-warning-5":
           sentiment === "warning",
       })}
