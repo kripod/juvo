@@ -1,0 +1,20 @@
+name: Bootstrap project
+description: Set up Node.js environment and then install dependencies
+
+inputs:
+  npm-token:
+    description: Token for restricted package access or publishing on npm.
+
+runs:
+  using: composite
+  steps:
+    - uses: pnpm/action-setup@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: .nvmrc
+        cache: pnpm
+    - name: Set up npm token
+      run: echo "//registry.npmjs.org/:_authToken=${{ inputs.npm-token || env.NPM_TOKEN_READONLY }}" >> ~/.npmrc
+      shell: bash
+    - run: pnpm install
+      shell: bash
