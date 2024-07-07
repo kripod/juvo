@@ -14,9 +14,15 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: [`${rootDir}/mod.ts`, `${rootDir}/tailwind-preset.ts`],
+      entry: [
+        `${rootDir}/mod.ts`,
+        `${rootDir}/styles/base.css`,
+        `${rootDir}/styles/pregenerated.css`,
+        `${rootDir}/tailwind-preset.ts`,
+      ],
       formats: ["es"],
     },
+    cssCodeSplit: true,
     sourcemap: true,
     minify: false,
     rollupOptions: {
@@ -29,6 +35,5 @@ export default defineConfig({
         preserveModules: true,
       },
     },
-    emptyOutDir: false,
   },
 });
