@@ -17,7 +17,7 @@ export const ButtonPrimary = forwardRef(function ButtonPrimary(
       size={size}
       className={clsx(
         className,
-        "bg-ui-primary-3 text-ui-primary-0 hover:bg-ui-primary-4",
+        "bg-ui-primary-600 text-ui-primary-50 hover:bg-ui-primary-700",
         size === "sm" && "rounded-md px-2.5",
         size === "md" && "rounded-lg px-4",
         size === "lg" && "rounded-xl px-6",

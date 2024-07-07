@@ -3,6 +3,6 @@
 @layer base {
   body {
     /* Embrace applying text styles within components */
-    @apply text-xs text-ui-neutral-3;
+    @apply text-xs text-ui-neutral-600;
   }
 }
