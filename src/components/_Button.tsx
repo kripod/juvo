@@ -4,7 +4,6 @@ import { forwardRef } from "react";
 export interface ButtonProps extends React.ComponentPropsWithRef<"button"> {
   render?: (props: React.ComponentPropsWithRef<"button">) => React.ReactNode;
   size?: "auto" | "sm" | "md" | "lg";
-  disabled?: boolean;
 }
 
 const defaultRender: ButtonProps["render"] = (props) => (
@@ -25,7 +24,7 @@ export const Button = forwardRef(function Button(
     ref,
     className: clsx(
       className,
-      "select-none transition disabled:pointer-events-none disabled:opacity-50",
+      "select-none transition disabled:pointer-events-none disabled:opacity-40",
       size !== "auto" && "inline-flex items-center justify-center text-center",
       size === "sm" && "h-8 rounded-md px-2.5 text-base/none",
       size === "md" && "h-10 rounded-lg px-4 text-base/none",

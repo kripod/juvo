@@ -12,6 +12,7 @@ type Story = StoryObj<typeof meta>;
 export const Basic = {
   args: {
     children: "Click me",
+    disabled: false,
   },
 } satisfies Story;
 
