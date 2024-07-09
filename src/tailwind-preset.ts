@@ -16,7 +16,7 @@ export default {
     colors,
     extend: {
       borderColor: ({ theme }) => ({
-        DEFAULT: theme("colors.ui.neutral-2") as string,
+        DEFAULT: theme("colors.ui.neutral-200") as string,
       }),
       colors: {
         ui: Object.fromEntries(
