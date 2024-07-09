@@ -17,7 +17,8 @@ export const ButtonPrimary = forwardRef(function ButtonPrimary(
       size={size}
       className={clsx(
         className,
-        "bg-ui-primary-600 font-medium text-ui-primary-50 hover:bg-ui-primary-700",
+        "bg-ui-primary-600 text-ui-primary-50 hover:bg-ui-primary-700",
+        size !== "sm" && "font-medium",
       )}
       {...props}
     />
