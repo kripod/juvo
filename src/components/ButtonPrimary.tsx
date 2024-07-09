@@ -1,7 +1,7 @@
 import { clsx } from "clsx/lite";
 import { forwardRef } from "react";
 
-import { Button, type ButtonProps } from "./_Button";
+import { Button, type ButtonProps } from "./Button";
 
 export interface ButtonPrimaryProps extends ButtonProps {
   size?: "sm" | "md" | "lg";
