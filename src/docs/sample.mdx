@@ -1,6 +1,7 @@
 import { Unstyled } from "@storybook/blocks";
 
 import { Alert } from "../components/Alert";
+import { Input } from "../components/Input";
 import { ButtonPrimary } from "../components/ButtonPrimary";
 
 <Unstyled>
@@ -11,8 +12,8 @@ import { ButtonPrimary } from "../components/ButtonPrimary";
         page. Only text content updates are conveyed to screen readers,
         preserving focus.
         <div className="flex flex-wrap gap-3">
-          <ButtonPrimary>Ok</ButtonPrimary>
-          <ButtonPrimary>Cancel</ButtonPrimary>
+          <ButtonPrimary size="sm">Ok</ButtonPrimary>
+          <ButtonPrimary size="sm">Cancel</ButtonPrimary>
         </div>
       </div>
     </Alert>
@@ -21,5 +22,9 @@ import { ButtonPrimary } from "../components/ButtonPrimary";
     <Alert sentiment="warning">This is an alert.</Alert>
     <div>This is just a block of text.</div>
     <ButtonPrimary>Button</ButtonPrimary>
+    <div className="space-x-2">
+      <Input placeholder="Placeholder" />
+      <ButtonPrimary size="sm">Submit</ButtonPrimary>
+    </div>
   </div>
 </Unstyled>
