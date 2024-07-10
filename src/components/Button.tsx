@@ -1,6 +1,8 @@
 import { clsx } from "clsx/lite";
 import { forwardRef } from "react";
 
+import { controlClassName } from "../utils/controlClassName";
+
 export interface ButtonProps extends React.ComponentPropsWithRef<"button"> {
   render?: (props: React.ComponentPropsWithRef<"button">) => React.ReactNode;
   size?: "auto" | "sm" | "md" | "lg";
@@ -24,11 +26,12 @@ export const Button = forwardRef(function Button(
     ref,
     className: clsx(
       className,
-      "select-none transition disabled:pointer-events-none disabled:opacity-40",
-      size !== "auto" && "inline-flex items-center justify-center text-center",
-      size === "sm" && "h-8 rounded-md px-2.5 text-base/none",
-      size === "md" && "h-10 rounded-lg px-4 text-base/none",
-      size === "lg" && "h-14 rounded-xl px-6 text-xl/none",
+      "select-none",
+      size !== "auto" &&
+        clsx(
+          "inline-flex items-center justify-center text-center",
+          controlClassName({ size }),
+        ),
     ),
     children,
     ...props,
