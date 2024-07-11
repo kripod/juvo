@@ -17,8 +17,9 @@ export const Input = forwardRef(function Input(
       ref={ref}
       className={clsx(
         className,
-        "border border-ui-neutral-600 bg-ui-neutral-50 text-ui-neutral-800 placeholder:text-ui-neutral-500",
         controlClassName({ size }),
+        "border border-ui-neutral-600 bg-ui-neutral-50 text-ui-neutral-800 placeholder:text-ui-neutral-500",
+        size === "sm" && "px-2.5",
       )}
       {...props}
     />

@@ -26,11 +26,14 @@ export const Button = forwardRef(function Button(
     ref,
     className: clsx(
       className,
+      controlClassName({ size }),
       "select-none",
       size !== "auto" &&
         clsx(
           "inline-flex items-center justify-center text-center",
-          controlClassName({ size }),
+          size === "sm" && "px-2.5",
+          size === "md" && "px-4",
+          size === "lg" && "px-6",
         ),
     ),
     children,
