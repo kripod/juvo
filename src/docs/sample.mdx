@@ -11,8 +11,8 @@ import { ButtonPrimary } from "../components/ButtonPrimary";
         An alert displays a brief, important message, usually at the top of a
         page. Only text content updates are conveyed to screen readers,
         preserving focus.
-        <div className="flex flex-wrap gap-3">
-          <Input placeholder="Placeholder" />
+        <div className="flex flex-wrap gap-2">
+          <Input size="sm" placeholder="Placeholder" />
           <ButtonPrimary size="sm">Ok</ButtonPrimary>
           <ButtonPrimary size="sm">Cancel</ButtonPrimary>
         </div>
@@ -22,10 +22,17 @@ import { ButtonPrimary } from "../components/ButtonPrimary";
     <Alert sentiment="success">This is an alert.</Alert>
     <Alert sentiment="warning">This is an alert.</Alert>
     <div>This is just a block of text.</div>
-    <ButtonPrimary>Button</ButtonPrimary>
     <div className="space-x-2">
-      <Input placeholder="Placeholder" />
+      <Input size="sm" placeholder="Placeholder" />
       <ButtonPrimary size="sm">Submit</ButtonPrimary>
+    </div>
+    <div className="space-x-2">
+      <Input size="md" placeholder="Placeholder" />
+      <ButtonPrimary size="md">Submit</ButtonPrimary>
+    </div>
+    <div className="space-x-2">
+      <Input size="lg" placeholder="Placeholder" />
+      <ButtonPrimary size="lg">Submit</ButtonPrimary>
     </div>
   </div>
 </Unstyled>

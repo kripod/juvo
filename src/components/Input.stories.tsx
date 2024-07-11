@@ -32,3 +32,13 @@ export const Interactivity = {
     await userEvent.tab();
   },
 } satisfies Story;
+
+export const Sizes = {
+  render: () => (
+    <div className="flex flex-col items-start gap-y-4">
+      <Input size="sm" placeholder="Small" />
+      <Input size="md" placeholder="Medium" />
+      <Input size="lg" placeholder="Large" />
+    </div>
+  ),
+} satisfies Story;
