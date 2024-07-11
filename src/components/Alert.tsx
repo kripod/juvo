@@ -25,15 +25,15 @@ export function Alert({ sentiment = "info", children }: AlertProps) {
     <div
       role="alert"
       className={clsx(
-        "flex gap-x-2 rounded-2xl border p-4 text-base",
+        "flex gap-x-2 rounded-2xl p-4 text-base ring-1 ring-inset",
         sentiment === "info" &&
-          "border-ui-info-300 bg-ui-info-100 text-ui-info-800",
+          "bg-ui-info-100 text-ui-info-800 ring-ui-info-300",
         sentiment === "danger" &&
-          "border-ui-danger-300 bg-ui-danger-100 text-ui-danger-800",
+          "bg-ui-danger-100 text-ui-danger-800 ring-ui-danger-300",
         sentiment === "success" &&
-          "border-ui-success-300 bg-ui-success-100 text-ui-success-800",
+          "bg-ui-success-100 text-ui-success-800 ring-ui-success-300",
         sentiment === "warning" &&
-          "border-ui-warning-300 bg-ui-warning-100 text-ui-warning-800",
+          "bg-ui-warning-100 text-ui-warning-800 ring-ui-warning-300",
       )}
     >
       <Icon className="size-6 flex-none" />
