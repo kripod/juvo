@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { userEvent } from "@storybook/test";
 
 import { ButtonPrimary } from "./ButtonPrimary";
 
@@ -13,6 +14,18 @@ export const Basic = {
   args: {
     children: "Click me",
     disabled: false,
+  },
+} satisfies Story;
+
+export const Interactivity = {
+  render: () => (
+    <div className="flex flex-col items-start gap-y-4">
+      <ButtonPrimary>Focused</ButtonPrimary>
+      <ButtonPrimary disabled>Disabled</ButtonPrimary>
+    </div>
+  ),
+  play: async () => {
+    await userEvent.tab();
   },
 } satisfies Story;
 

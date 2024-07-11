@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { userEvent } from "@storybook/test";
 
 import { Input } from "./Input";
 
@@ -18,13 +19,16 @@ export const Basic = {
   },
 } satisfies Story;
 
-export const Mutability = {
+export const Interactivity = {
   render: () => (
     <div className="flex flex-col items-start gap-y-4">
-      <Input defaultValue="Mutable" />
+      <Input defaultValue="Focused" />
       <Input value="Read-only" readOnly />
       <Input placeholder="Placeholder" />
       <Input value="Disabled" disabled />
     </div>
   ),
+  play: async () => {
+    await userEvent.tab();
+  },
 } satisfies Story;
