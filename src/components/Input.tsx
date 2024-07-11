@@ -18,7 +18,7 @@ export const Input = forwardRef(function Input(
       className={clsx(
         className,
         controlClassName({ size }),
-        "border border-ui-neutral-600 bg-ui-neutral-50 text-ui-neutral-800 placeholder:text-ui-neutral-500",
+        "bg-ui-neutral-50 text-ui-neutral-800 ring-1 ring-inset ring-ui-neutral-600 placeholder:text-ui-neutral-500 focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ui-primary-600",
         size === "sm" && "px-2.5",
         size === "md" && "px-3",
         size === "lg" && "px-4 font-medium",
