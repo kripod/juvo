@@ -30,7 +30,7 @@ export const Button = forwardRef(function Button(
       "select-none",
       size !== "auto" &&
         clsx(
-          "inline-flex items-center justify-center text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ui-primary-600",
+          "inline-flex items-center justify-center text-center",
           size === "sm" && "px-2.5",
           size === "md" && "px-4",
           size === "lg" && "px-6",
