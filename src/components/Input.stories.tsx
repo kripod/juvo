@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { userEvent } from "@storybook/test";
 
+import { Stack } from "../../.storybook/blocks/Stack";
 import { Input } from "./Input";
 
 const meta = {
@@ -21,12 +22,12 @@ export const Basic = {
 
 export const Interactivity = {
   render: () => (
-    <div className="flex flex-col items-start gap-y-4">
+    <Stack>
       <Input defaultValue="Focused" />
       <Input value="Read-only" readOnly />
       <Input placeholder="Placeholder" />
       <Input value="Disabled" disabled />
-    </div>
+    </Stack>
   ),
   play: async () => {
     await userEvent.tab();
@@ -35,10 +36,10 @@ export const Interactivity = {
 
 export const Sizes = {
   render: () => (
-    <div className="flex flex-col items-start gap-y-4">
+    <Stack>
       <Input size="sm" placeholder="Small" />
       <Input size="md" placeholder="Medium" />
       <Input size="lg" placeholder="Large" />
-    </div>
+    </Stack>
   ),
 } satisfies Story;

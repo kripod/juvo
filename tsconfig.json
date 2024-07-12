@@ -1,5 +1,6 @@
 {
   "extends": "@total-typescript/tsconfig/bundler/dom",
+  "include": ["**/*", ".storybook/**/*"],
   "exclude": ["node_modules/", "dist/", "storybook-static/"],
   "compilerOptions": {
     "checkJs": true,
