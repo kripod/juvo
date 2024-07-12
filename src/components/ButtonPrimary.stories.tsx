@@ -39,10 +39,3 @@ export const Sizes = {
     </Stack>
   ),
 } satisfies Story;
-
-export const Block = {
-  args: {
-    ...Basic.args,
-    className: "w-full",
-  },
-} satisfies Story;
