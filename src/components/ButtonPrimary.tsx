@@ -5,10 +5,16 @@ import { Button, type ButtonProps } from "./Button";
 
 export interface ButtonPrimaryProps extends ButtonProps {
   size?: "sm" | "md" | "lg";
+  sentiment?: "neutral" | "danger";
 }
 
 export const ButtonPrimary = forwardRef(function ButtonPrimary(
-  { size = "md", className, ...props }: ButtonPrimaryProps,
+  {
+    size = "md",
+    sentiment = "neutral",
+    className,
+    ...props
+  }: ButtonPrimaryProps,
   ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
   return (
@@ -17,7 +23,11 @@ export const ButtonPrimary = forwardRef(function ButtonPrimary(
       size={size}
       className={clsx(
         className,
-        "bg-ui-primary-600 font-medium text-ui-primary-50 active:bg-ui-primary-700",
+        "font-medium",
+        sentiment === "neutral" &&
+          "bg-ui-primary-600 text-ui-primary-50 active:bg-ui-primary-700",
+        sentiment === "danger" &&
+          "bg-ui-danger-600 text-ui-danger-50 active:bg-ui-danger-700",
       )}
       {...props}
     />

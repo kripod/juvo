@@ -39,3 +39,12 @@ export const Sizes = {
     </Stack>
   ),
 } satisfies Story;
+
+export const Sentiments = {
+  render: () => (
+    <Stack>
+      <ButtonPrimary sentiment="neutral">Neutral</ButtonPrimary>
+      <ButtonPrimary sentiment="danger">Danger</ButtonPrimary>
+    </Stack>
+  ),
+} satisfies Story;
