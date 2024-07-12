@@ -10,9 +10,9 @@
   "plugins": ["react-refresh"],
   "settings": {
     "jsx-a11y": {
-      "polymorphicPropName": "as",
       "components": {
-        "ButtonPrimary": "button"
+        "ButtonPrimary": "button",
+        "Input": "input"
       }
     }
   },
