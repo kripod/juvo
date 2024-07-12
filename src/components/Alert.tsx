@@ -25,7 +25,7 @@ export function Alert({ sentiment = "info", children }: AlertProps) {
     <div
       role="alert"
       className={clsx(
-        "flex gap-x-2 rounded-2xl p-4 text-base ring-1 ring-inset",
+        "flex gap-2 rounded-2xl p-4 text-base ring-1 ring-inset",
         sentiment === "info" &&
           "bg-ui-info-100 text-ui-info-800 ring-ui-info-300",
         sentiment === "danger" &&

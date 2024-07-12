@@ -18,7 +18,7 @@ export const Basic = {
 
 export const Sentiments = {
   render: () => (
-    <div className="flex flex-col gap-y-4">
+    <div className="flex flex-col gap-4">
       <Alert sentiment="info">Info</Alert>
       <Alert sentiment="danger">Danger</Alert>
       <Alert sentiment="success">Success</Alert>

@@ -22,7 +22,7 @@ export const Basic = {
 
 export const Interactivity = {
   render: () => (
-    <div className="flex flex-col items-start gap-y-4">
+    <div className="flex flex-col items-start gap-4">
       <Input defaultValue="Focused" />
       <Input defaultValue="Invalid" aria-invalid />
       <Input value="Read-only" readOnly />
@@ -37,7 +37,7 @@ export const Interactivity = {
 
 export const Sizes = {
   render: () => (
-    <div className="flex flex-col items-start gap-y-4">
+    <div className="flex flex-col items-start gap-4">
       <Input size="sm" placeholder="Small" />
       <Input size="md" placeholder="Medium" />
       <Input size="lg" placeholder="Large" />

@@ -31,7 +31,7 @@ export const Interactivity = {
 
 export const Sizes = {
   render: () => (
-    <div className="flex flex-col items-start gap-y-4">
+    <div className="flex flex-col items-start gap-4">
       <ButtonPrimary size="sm">Small</ButtonPrimary>
       <ButtonPrimary size="md">Medium</ButtonPrimary>
       <ButtonPrimary size="lg">Large</ButtonPrimary>
