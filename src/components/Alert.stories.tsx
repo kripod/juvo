@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Stack } from "../../.storybook/blocks/Stack";
 import { Alert } from "./Alert";
 
 const meta = {
@@ -19,11 +18,11 @@ export const Basic = {
 
 export const Sentiments = {
   render: () => (
-    <Stack>
+    <div className="flex flex-col gap-y-4">
       <Alert sentiment="info">Info</Alert>
       <Alert sentiment="danger">Danger</Alert>
       <Alert sentiment="success">Success</Alert>
       <Alert sentiment="warning">Warning</Alert>
-    </Stack>
+    </div>
   ),
 } satisfies Story;

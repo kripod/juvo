@@ -1,6 +1,5 @@
 import { Unstyled } from "@storybook/blocks";
 
-import { Stack } from "../../.storybook/blocks/Stack";
 import { Alert } from "../components/Alert";
 import { ButtonPrimary } from "../components/ButtonPrimary";
 import { Input } from "../components/Input";
@@ -8,7 +7,7 @@ import { Input } from "../components/Input";
 <Unstyled>
   <div className="space-y-4 text-base text-ui-neutral-800">
     <Alert>
-      <Stack>
+      <div className="flex flex-col gap-y-4">
         An alert displays a brief, important message, usually at the top of a
         page. Only text content updates are conveyed to screen readers,
         preserving focus.
@@ -17,7 +16,7 @@ import { Input } from "../components/Input";
           <ButtonPrimary size="sm">Ok</ButtonPrimary>
           <ButtonPrimary size="sm">Cancel</ButtonPrimary>
         </div>
-      </Stack>
+      </div>
     </Alert>
     <Alert sentiment="danger">This is an alert.</Alert>
     <Alert sentiment="success">This is an alert.</Alert>

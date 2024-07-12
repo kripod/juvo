@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { userEvent } from "@storybook/test";
 
-import { Stack } from "../../.storybook/blocks/Stack";
 import { ButtonPrimary } from "./ButtonPrimary";
 
 const meta = {
@@ -20,10 +19,10 @@ export const Basic = {
 
 export const Interactivity = {
   render: () => (
-    <Stack>
+    <div className="flex flex-wrap gap-4">
       <ButtonPrimary>Focused</ButtonPrimary>
       <ButtonPrimary disabled>Disabled</ButtonPrimary>
-    </Stack>
+    </div>
   ),
   play: async () => {
     await userEvent.tab();
@@ -32,19 +31,19 @@ export const Interactivity = {
 
 export const Sizes = {
   render: () => (
-    <Stack>
+    <div className="flex flex-col items-start gap-y-4">
       <ButtonPrimary size="sm">Small</ButtonPrimary>
       <ButtonPrimary size="md">Medium</ButtonPrimary>
       <ButtonPrimary size="lg">Large</ButtonPrimary>
-    </Stack>
+    </div>
   ),
 } satisfies Story;
 
 export const Sentiments = {
   render: () => (
-    <Stack>
+    <div className="flex flex-wrap gap-4">
       <ButtonPrimary sentiment="neutral">Neutral</ButtonPrimary>
       <ButtonPrimary sentiment="danger">Danger</ButtonPrimary>
-    </Stack>
+    </div>
   ),
 } satisfies Story;
