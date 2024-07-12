@@ -15,6 +15,7 @@ export const Basic = {
   args: {
     defaultValue: "",
     placeholder: "Placeholder",
+    "aria-invalid": false,
     readOnly: false,
     disabled: false,
   },
@@ -24,6 +25,7 @@ export const Interactivity = {
   render: () => (
     <Stack>
       <Input defaultValue="Focused" />
+      <Input defaultValue="Invalid" aria-invalid />
       <Input value="Read-only" readOnly />
       <Input placeholder="Placeholder" />
       <Input value="Disabled" disabled />

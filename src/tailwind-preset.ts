@@ -15,6 +15,9 @@ export default {
   theme: {
     colors,
     extend: {
+      aria: {
+        invalid: 'invalid="true"',
+      },
       borderColor: ({ theme }) => ({
         DEFAULT: theme("colors.ui.neutral-200") as string,
       }),
