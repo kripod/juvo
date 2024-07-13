@@ -39,11 +39,11 @@ export const Sizes = {
   ),
 } satisfies Story;
 
-export const Sentiments = {
+export const Colors = {
   render: () => (
     <div className="flex flex-wrap gap-4">
-      <ButtonPrimary sentiment="neutral">Neutral</ButtonPrimary>
-      <ButtonPrimary sentiment="danger">Danger</ButtonPrimary>
+      <ButtonPrimary color="neutral">Neutral</ButtonPrimary>
+      <ButtonPrimary color="danger">Danger</ButtonPrimary>
     </div>
   ),
 } satisfies Story;
