@@ -5,7 +5,7 @@ function oklchCoords(color: string) {
 }
 
 type ColorGroup =
-  | "primary"
+  | "accent"
   | "neutral"
   | "info"
   | "danger"
@@ -45,7 +45,7 @@ function colorFamily<T extends ColorGroup>(
 interface Theme extends ColorFamily<ColorGroup> {}
 
 export const lightTheme = {
-  ...colorFamily("primary", colors.indigo),
+  ...colorFamily("accent", colors.indigo),
   ...colorFamily("neutral", colors.zinc),
   ...colorFamily("info", colors.blue),
   ...colorFamily("danger", colors.red),
@@ -54,7 +54,7 @@ export const lightTheme = {
 } as const satisfies Theme;
 
 export const darkTheme = {
-  ...colorFamily("primary", colors.indigo, { invert: true }),
+  ...colorFamily("accent", colors.indigo, { invert: true }),
   ...colorFamily("neutral", colors.zinc, { invert: true }),
   ...colorFamily("info", colors.blue, { invert: true }),
   ...colorFamily("danger", colors.red, { invert: true }),
