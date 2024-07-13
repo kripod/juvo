@@ -16,13 +16,13 @@ export const Basic = {
   },
 } satisfies Story;
 
-export const Sentiments = {
+export const Types = {
   render: () => (
     <div className="flex flex-col gap-4">
-      <Alert sentiment="info">Info</Alert>
-      <Alert sentiment="danger">Danger</Alert>
-      <Alert sentiment="success">Success</Alert>
-      <Alert sentiment="warning">Warning</Alert>
+      <Alert type="info">Info</Alert>
+      <Alert type="danger">Danger</Alert>
+      <Alert type="success">Success</Alert>
+      <Alert type="warning">Warning</Alert>
     </div>
   ),
 } satisfies Story;
