@@ -25,7 +25,7 @@ export const ButtonSecondary = forwardRef(function ButtonSecondary(
         className,
         "bg-ui-neutral-50 font-medium ring-1 ring-inset",
         sentiment === "neutral" &&
-          "text-ui-accent-700 ring-ui-accent-600 active:bg-ui-accent-100",
+          "text-ui-neutral-950 ring-ui-neutral-600 active:bg-ui-neutral-100",
         sentiment === "danger" &&
           "text-ui-danger-700 ring-ui-danger-600 active:bg-ui-danger-100",
       )}

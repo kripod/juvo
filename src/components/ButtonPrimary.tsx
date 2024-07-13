@@ -25,7 +25,7 @@ export const ButtonPrimary = forwardRef(function ButtonPrimary(
         className,
         "font-medium",
         sentiment === "neutral" &&
-          "bg-ui-accent-600 text-ui-accent-50 active:bg-ui-accent-700",
+          "bg-ui-neutral-900 text-ui-neutral-50 active:bg-ui-neutral-800",
         sentiment === "danger" &&
           "bg-ui-danger-600 text-ui-danger-50 active:bg-ui-danger-700",
       )}
