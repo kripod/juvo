@@ -43,6 +43,7 @@ export const Colors = {
   render: () => (
     <div className="flex flex-wrap gap-4">
       <ButtonPrimary color="neutral">Neutral</ButtonPrimary>
+      <ButtonPrimary color="accent">Accent</ButtonPrimary>
       <ButtonPrimary color="danger">Danger</ButtonPrimary>
     </div>
   ),

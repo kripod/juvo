@@ -5,7 +5,7 @@ import { Button, type ButtonProps } from "./Button";
 
 export interface ButtonPrimaryProps extends ButtonProps {
   size?: "sm" | "md" | "lg";
-  color?: "neutral" | "danger";
+  color?: "neutral" | "accent" | "danger";
 }
 
 export const ButtonPrimary = forwardRef(function ButtonPrimary(
@@ -21,6 +21,8 @@ export const ButtonPrimary = forwardRef(function ButtonPrimary(
         "font-medium",
         color === "neutral" &&
           "bg-ui-neutral-900 text-ui-neutral-50 active:bg-ui-neutral-800",
+        color === "accent" &&
+          "bg-ui-accent-600 text-ui-accent-50 active:bg-ui-accent-700",
         color === "danger" &&
           "bg-ui-danger-600 text-ui-danger-50 active:bg-ui-danger-700",
       )}
