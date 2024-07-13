@@ -18,13 +18,13 @@ export const ButtonSecondary = forwardRef(function ButtonSecondary(
       size={size}
       className={clsx(
         className,
-        "bg-ui-neutral-50 font-medium ring-1 ring-inset",
+        "font-medium",
         color === "neutral" &&
-          "text-ui-neutral-950 ring-ui-neutral-600 active:bg-ui-neutral-100",
+          "bg-ui-neutral-200 text-ui-neutral-950 active:bg-ui-neutral-300",
         color === "accent" &&
-          "text-ui-accent-700 ring-ui-accent-600 active:bg-ui-accent-100",
+          "bg-ui-accent-200 text-ui-accent-950 active:bg-ui-accent-300",
         color === "danger" &&
-          "text-ui-danger-700 ring-ui-danger-600 active:bg-ui-danger-100",
+          "bg-ui-danger-200 text-ui-danger-950 active:bg-ui-danger-300",
       )}
       {...props}
     />
