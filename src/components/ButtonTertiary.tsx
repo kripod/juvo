@@ -5,11 +5,11 @@ import { Button, type ButtonProps } from "./Button";
 
 export interface ButtonTertiaryProps extends ButtonProps {
   size?: "sm" | "md" | "lg";
-  color?: "neutral" | "accent" | "danger";
+  color?: "accent" | "danger";
 }
 
 export const ButtonTertiary = forwardRef(function ButtonTertiary(
-  { size = "md", color = "neutral", className, ...props }: ButtonTertiaryProps,
+  { size = "md", color = "accent", className, ...props }: ButtonTertiaryProps,
   ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
   return (
@@ -19,8 +19,6 @@ export const ButtonTertiary = forwardRef(function ButtonTertiary(
       className={clsx(
         className,
         "bg-ui-neutral-50 font-medium ring-1 ring-inset",
-        color === "neutral" &&
-          "text-ui-neutral-950 ring-ui-neutral-600 active:bg-ui-neutral-100",
         color === "accent" &&
           "text-ui-accent-700 ring-ui-accent-600 active:bg-ui-accent-100",
         color === "danger" &&
