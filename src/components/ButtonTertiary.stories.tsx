@@ -42,6 +42,7 @@ export const Sizes = {
 export const Colors = {
   render: () => (
     <div className="flex flex-wrap gap-4">
+      <ButtonTertiary color="neutral">Neutral</ButtonTertiary>
       <ButtonTertiary color="accent">Accent</ButtonTertiary>
       <ButtonTertiary color="danger">Danger</ButtonTertiary>
     </div>
