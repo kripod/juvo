@@ -44,3 +44,12 @@ export const Sizes = {
     </div>
   ),
 } satisfies Story;
+
+export const Shapes = {
+  render: () => (
+    <div className="flex flex-col items-start gap-4">
+      <Input shape="rectangle" placeholder="Rectangle" />
+      <Input shape="pill" placeholder="Pill" />
+    </div>
+  ),
+} satisfies Story;

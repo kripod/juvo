@@ -6,10 +6,11 @@ import { controlClassName } from "../utils/controlClassName";
 export interface InputProps
   extends Omit<React.ComponentPropsWithRef<"input">, "size"> {
   size?: "sm" | "md" | "lg";
+  shape?: "rectangle" | "pill";
 }
 
 export const Input = forwardRef(function Input(
-  { size = "md", className, ...props }: InputProps,
+  { size = "md", shape = "rectangle", className, ...props }: InputProps,
   ref: React.ForwardedRef<HTMLInputElement>,
 ) {
   return (
@@ -17,7 +18,7 @@ export const Input = forwardRef(function Input(
       ref={ref}
       className={clsx(
         className,
-        controlClassName({ size }),
+        controlClassName({ size, shape }),
         "bg-ui-neutral-50 text-ui-neutral-800 ring-1 ring-inset ring-ui-neutral-600 placeholder:text-ui-neutral-500 aria-invalid:ring-2 aria-invalid:ring-ui-danger-600",
         size === "sm" && "px-2.5",
         size === "md" && "px-3",
