@@ -10,20 +10,13 @@ export interface ButtonTertiaryProps extends ButtonProps {
 }
 
 export const ButtonTertiary = forwardRef(function ButtonTertiary(
-  {
-    size = "md",
-    shape = "rectangle",
-    color = "neutral",
-    className,
-    ...props
-  }: ButtonTertiaryProps,
+  { size = "md", color = "neutral", className, ...props }: ButtonTertiaryProps,
   ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
   return (
     <Button
       ref={ref}
       size={size}
-      shape={shape}
       className={clsx(
         className,
         "bg-ui-neutral-50 font-medium ring-1 ring-inset",

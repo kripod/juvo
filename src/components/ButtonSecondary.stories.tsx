@@ -1,3 +1,5 @@
+import { PlusIcon as PlusIcon16 } from "@heroicons/react/16/solid";
+import { PlusIcon as PlusIcon24 } from "@heroicons/react/24/solid";
 import type { Meta, StoryObj } from "@storybook/react";
 import { userEvent } from "@storybook/test";
 
@@ -35,6 +37,22 @@ export const Sizes = {
       <ButtonSecondary size="sm">Small</ButtonSecondary>
       <ButtonSecondary size="md">Medium</ButtonSecondary>
       <ButtonSecondary size="lg">Large</ButtonSecondary>
+    </div>
+  ),
+} satisfies Story;
+
+export const WithIcon = {
+  render: () => (
+    <div className="flex flex-col items-start gap-4">
+      <ButtonSecondary size="sm" icon={<PlusIcon16 className="size-4" />}>
+        Add item
+      </ButtonSecondary>
+      <ButtonSecondary size="md" icon={<PlusIcon16 className="size-4" />}>
+        Add item
+      </ButtonSecondary>
+      <ButtonSecondary size="lg" icon={<PlusIcon24 className="size-6" />}>
+        Add item
+      </ButtonSecondary>
     </div>
   ),
 } satisfies Story;
