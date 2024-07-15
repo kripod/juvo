@@ -37,8 +37,8 @@ export const Button = forwardRef(function Button(
         clsx(
           "inline-flex items-center justify-center text-center",
           size === "sm" && "gap-1 px-2.5",
-          size === "md" && "gap-1.5 px-4",
-          size === "lg" && "gap-2 px-6",
+          size === "md" && "gap-1 px-4",
+          size === "lg" && "gap-1.5 px-6",
         ),
     ),
     children:
