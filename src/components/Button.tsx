@@ -6,6 +6,7 @@ import { controlClassName } from "../utils/controlClassName";
 export interface ButtonProps extends React.ComponentPropsWithRef<"button"> {
   render?: (props: React.ComponentPropsWithRef<"button">) => React.ReactNode;
   size?: "auto" | "sm" | "md" | "lg";
+  shape?: "rectangle" | "pill";
 }
 
 const defaultRender: ButtonProps["render"] = (props) => (
@@ -16,6 +17,7 @@ export const Button = forwardRef(function Button(
   {
     render = defaultRender,
     size = "auto",
+    shape = "rectangle",
     className,
     children,
     ...props
@@ -26,7 +28,7 @@ export const Button = forwardRef(function Button(
     ref,
     className: clsx(
       className,
-      controlClassName({ size }),
+      controlClassName({ size, shape }),
       "select-none",
       size !== "auto" &&
         clsx(

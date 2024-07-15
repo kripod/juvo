@@ -39,6 +39,15 @@ export const Sizes = {
   ),
 } satisfies Story;
 
+export const Shapes = {
+  render: () => (
+    <div className="flex flex-col items-start gap-4">
+      <ButtonSecondary shape="rectangle">Rectangle</ButtonSecondary>
+      <ButtonSecondary shape="pill">Pill</ButtonSecondary>
+    </div>
+  ),
+} satisfies Story;
+
 export const Colors = {
   render: () => (
     <div className="flex flex-wrap gap-4">

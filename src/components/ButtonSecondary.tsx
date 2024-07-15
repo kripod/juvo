@@ -5,17 +5,25 @@ import { Button, type ButtonProps } from "./Button";
 
 export interface ButtonSecondaryProps extends ButtonProps {
   size?: "sm" | "md" | "lg";
+  shape?: "rectangle" | "pill";
   color?: "neutral" | "danger";
 }
 
 export const ButtonSecondary = forwardRef(function ButtonSecondary(
-  { size = "md", color = "neutral", className, ...props }: ButtonSecondaryProps,
+  {
+    size = "md",
+    shape = "rectangle",
+    color = "neutral",
+    className,
+    ...props
+  }: ButtonSecondaryProps,
   ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
   return (
     <Button
       ref={ref}
       size={size}
+      shape={shape}
       className={clsx(
         className,
         "font-medium",
