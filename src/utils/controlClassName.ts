@@ -1,8 +1,8 @@
 import { clsx } from "clsx/lite";
 
 interface ControlProps {
-  size?: "auto" | "sm" | "md" | "lg";
-  shape?: "rectangle" | "pill";
+  size: "auto" | "sm" | "md" | "lg";
+  shape: "rectangle" | "pill";
 }
 
 export function controlClassName({ size, shape }: ControlProps) {
