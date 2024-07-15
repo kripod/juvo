@@ -8,6 +8,7 @@ export interface ButtonProps extends React.ComponentPropsWithRef<"button"> {
   size?: "auto" | "sm" | "md" | "lg";
   icon?: React.ReactNode;
   shape?: "rectangle" | "pill";
+  children?: string;
 }
 
 const defaultRender: ButtonProps["render"] = (props) => (
