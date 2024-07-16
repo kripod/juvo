@@ -1,4 +1,7 @@
-import { PlusIcon as PlusIcon16 } from "@heroicons/react/16/solid";
+import {
+  Bars3BottomLeftIcon,
+  PlusIcon as PlusIcon16,
+} from "@heroicons/react/16/solid";
 import { PlusIcon as PlusIcon24 } from "@heroicons/react/24/solid";
 import type { Meta, StoryObj } from "@storybook/react";
 import { userEvent } from "@storybook/test";
@@ -62,6 +65,12 @@ export const Shapes = {
     <div className="flex flex-col items-start gap-4">
       <ButtonTertiary shape="rectangle">Rectangle</ButtonTertiary>
       <ButtonTertiary shape="pill">Pill</ButtonTertiary>
+      <ButtonTertiary shape="square">
+        <Bars3BottomLeftIcon className="size-4" />
+      </ButtonTertiary>
+      <ButtonTertiary shape="circle">
+        <Bars3BottomLeftIcon className="size-4" />
+      </ButtonTertiary>
     </div>
   ),
 } satisfies Story;
