@@ -3,14 +3,14 @@ import { forwardRef } from "react";
 
 import { Button, type ButtonProps } from "./Button";
 
-export interface ButtonFaintProps extends ButtonProps {
+export interface ButtonPlainProps extends ButtonProps {
   size?: "sm" | "md" | "lg";
   shape?: "rectangle" | "pill" | "square" | "circle";
   color?: "neutral" | "accent";
 }
 
-export const ButtonFaint = forwardRef(function ButtonFaint(
-  { size = "md", color = "neutral", className, ...props }: ButtonFaintProps,
+export const ButtonPlain = forwardRef(function ButtonPlain(
+  { size = "md", color = "neutral", className, ...props }: ButtonPlainProps,
   ref: React.ForwardedRef<HTMLButtonElement>,
 ) {
   return (
