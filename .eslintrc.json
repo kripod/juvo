@@ -11,7 +11,11 @@
   "settings": {
     "jsx-a11y": {
       "components": {
+        "Button": "button",
+        "ButtonPlain": "button",
         "ButtonPrimary": "button",
+        "ButtonSecondary": "button",
+        "ButtonTertiary": "button",
         "Input": "input"
       }
     }
