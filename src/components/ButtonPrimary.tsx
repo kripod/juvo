@@ -20,6 +20,9 @@ export const ButtonPrimary = forwardRef(function ButtonPrimary(
       className={clsx(
         className,
         "font-medium",
+        size === "sm" && "px-2.5",
+        size === "md" && "px-4",
+        size === "lg" && "px-6",
         color === "neutral" &&
           "bg-ui-neutral-900 text-ui-neutral-50 active:bg-ui-neutral-950",
         color === "accent" &&
