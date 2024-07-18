@@ -20,9 +20,9 @@ export const ButtonFaint = forwardRef(function ButtonFaint(
       className={clsx(
         className,
         "font-medium",
-        size === "sm" && "px-2",
-        size === "md" && "px-2.5",
-        size === "lg" && "px-3",
+        size === "sm" && "px-2.5",
+        size === "md" && "px-3",
+        size === "lg" && "px-4",
         color === "neutral" && "text-ui-neutral-950 active:bg-ui-neutral-100",
         color === "accent" && "text-ui-accent-700 active:bg-ui-accent-100",
       )}
