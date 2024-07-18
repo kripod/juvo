@@ -22,7 +22,7 @@ export const Input = forwardRef(function Input(
         "bg-ui-neutral-50 text-ui-neutral-800 ring-1 ring-inset ring-ui-neutral-600 placeholder:text-ui-neutral-500 aria-invalid:ring-2 aria-invalid:ring-ui-danger-600",
         size === "sm" && "px-2.5",
         size === "md" && "px-3",
-        size === "lg" && "px-4 font-medium",
+        size === "lg" && "px-4",
       )}
       {...props}
     />
