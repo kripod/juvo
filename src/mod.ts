@@ -1,4 +1,5 @@
 export { Alert, type AlertProps } from "./components/Alert";
+export { ButtonPlain, type ButtonPlainProps } from "./components/ButtonPlain";
 export {
   ButtonPrimary,
   type ButtonPrimaryProps,
@@ -7,4 +8,8 @@ export {
   ButtonSecondary,
   type ButtonSecondaryProps,
 } from "./components/ButtonSecondary";
+export {
+  ButtonTertiary,
+  type ButtonTertiaryProps,
+} from "./components/ButtonTertiary";
 export { Input, type InputProps } from "./components/Input";
