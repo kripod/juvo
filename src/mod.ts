@@ -12,6 +12,7 @@ export {
   ButtonTertiary,
   type ButtonTertiaryProps,
 } from "./components/ButtonTertiary";
+export { InputFilled, type InputFilledProps } from "./components/InputFilled";
 export {
   InputOutlined,
   type InputOutlinedProps,
