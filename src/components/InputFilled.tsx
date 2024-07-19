@@ -20,7 +20,7 @@ export const InputFilled = forwardRef(function InputFilled(
       className={clsx(
         className,
         controlClassName({ size, shape }),
-        "bg-ui-neutral-200 text-ui-neutral-950 placeholder:text-ui-neutral-600 aria-invalid:ring-2 aria-invalid:ring-inset aria-invalid:ring-ui-danger-600",
+        "bg-ui-neutral-200 text-ui-neutral-950 placeholder:text-ui-neutral-950/65 aria-invalid:ring-2 aria-invalid:ring-inset aria-invalid:ring-ui-danger-600",
         size === "sm" && "px-2.5",
         size === "md" && "px-3",
         size === "lg" && "px-4",
