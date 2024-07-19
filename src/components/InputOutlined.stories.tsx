@@ -25,9 +25,9 @@ export const Interactivity = {
     <div className="flex flex-col items-start gap-4">
       <InputOutlined defaultValue="Focused" />
       <InputOutlined defaultValue="Invalid" aria-invalid />
-      <InputOutlined value="Read-only" readOnly />
+      <InputOutlined defaultValue="Read-only" readOnly />
       <InputOutlined placeholder="Placeholder" />
-      <InputOutlined value="Disabled" disabled />
+      <InputOutlined defaultValue="Disabled" disabled />
     </div>
   ),
   play: async () => {
