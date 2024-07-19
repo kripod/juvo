@@ -21,13 +21,26 @@ export const Basic = {
 } satisfies Story;
 
 export const Interactivity = {
+  ...Basic,
   render: () => (
     <div className="flex flex-col items-start gap-4">
-      <InputOutlined defaultValue="Focused" />
-      <InputOutlined defaultValue="Invalid" aria-invalid />
-      <InputOutlined defaultValue="Read-only" readOnly />
+      <InputOutlined placeholder="Placeholder" defaultValue="Focused" />
+      <InputOutlined
+        placeholder="Placeholder"
+        defaultValue="Invalid"
+        aria-invalid
+      />
+      <InputOutlined
+        placeholder="Placeholder"
+        defaultValue="Read-only"
+        readOnly
+      />
       <InputOutlined placeholder="Placeholder" />
-      <InputOutlined defaultValue="Disabled" disabled />
+      <InputOutlined
+        placeholder="Placeholder"
+        defaultValue="Disabled"
+        disabled
+      />
     </div>
   ),
   play: async () => {
@@ -36,6 +49,7 @@ export const Interactivity = {
 } satisfies Story;
 
 export const Sizes = {
+  ...Basic,
   render: () => (
     <div className="flex flex-col items-start gap-4">
       <InputOutlined size="sm" placeholder="Small" />
@@ -46,6 +60,7 @@ export const Sizes = {
 } satisfies Story;
 
 export const Shapes = {
+  ...Basic,
   render: () => (
     <div className="flex flex-col items-start gap-4">
       <InputOutlined shape="rectangle" placeholder="Rectangle" />

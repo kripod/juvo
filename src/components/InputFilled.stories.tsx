@@ -21,16 +21,22 @@ export const Basic = {
 } satisfies Story;
 
 export const Interactivity = {
-  args: {
-    placeholder: "Placeholder",
-  },
-  render: (args) => (
+  ...Basic,
+  render: () => (
     <div className="flex flex-col items-start gap-4">
-      <InputFilled {...args} defaultValue="Focused" />
-      <InputFilled {...args} defaultValue="Invalid" aria-invalid />
-      <InputFilled {...args} defaultValue="Read-only" readOnly />
-      <InputFilled {...args} placeholder="Placeholder" />
-      <InputFilled {...args} defaultValue="Disabled" disabled />
+      <InputFilled placeholder="Placeholder" defaultValue="Focused" />
+      <InputFilled
+        placeholder="Placeholder"
+        defaultValue="Invalid"
+        aria-invalid
+      />
+      <InputFilled
+        placeholder="Placeholder"
+        defaultValue="Read-only"
+        readOnly
+      />
+      <InputFilled placeholder="Placeholder" />
+      <InputFilled placeholder="Placeholder" defaultValue="Disabled" disabled />
     </div>
   ),
   play: async () => {
@@ -39,9 +45,7 @@ export const Interactivity = {
 } satisfies Story;
 
 export const Sizes = {
-  args: {
-    placeholder: "Placeholder",
-  },
+  ...Basic,
   render: () => (
     <div className="flex flex-col items-start gap-4">
       <InputFilled size="sm" placeholder="Small" />
@@ -52,9 +56,7 @@ export const Sizes = {
 } satisfies Story;
 
 export const Shapes = {
-  args: {
-    placeholder: "Placeholder",
-  },
+  ...Basic,
   render: () => (
     <div className="flex flex-col items-start gap-4">
       <InputFilled shape="rectangle" placeholder="Rectangle" />

@@ -23,6 +23,7 @@ export const Basic = {
 } satisfies Story;
 
 export const Interactivity = {
+  ...Basic,
   render: () => (
     <div className="flex flex-wrap gap-4">
       <ButtonTertiary>Focused</ButtonTertiary>
@@ -35,6 +36,7 @@ export const Interactivity = {
 } satisfies Story;
 
 export const Sizes = {
+  ...Basic,
   render: () => (
     <div className="flex flex-col items-start gap-4">
       <ButtonTertiary size="sm">Small</ButtonTertiary>
@@ -45,6 +47,7 @@ export const Sizes = {
 } satisfies Story;
 
 export const WithIcon = {
+  ...Basic,
   render: () => (
     <div className="flex flex-col items-start gap-4">
       <ButtonTertiary size="sm" iconStart={<PlusIcon16 className="size-4" />}>
@@ -61,6 +64,7 @@ export const WithIcon = {
 } satisfies Story;
 
 export const Shapes = {
+  ...Basic,
   render: () => (
     <div className="flex flex-col items-start gap-4">
       <ButtonTertiary shape="rectangle">Rectangle</ButtonTertiary>
@@ -76,6 +80,7 @@ export const Shapes = {
 } satisfies Story;
 
 export const Colors = {
+  ...Basic,
   render: () => (
     <div className="flex flex-wrap gap-4">
       <ButtonTertiary color="neutral">Neutral</ButtonTertiary>

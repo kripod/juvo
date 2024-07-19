@@ -17,6 +17,7 @@ export const Basic = {
 } satisfies Story;
 
 export const Types = {
+  ...Basic,
   render: () => (
     <div className="flex flex-col gap-4">
       <Alert type="info">Info</Alert>
