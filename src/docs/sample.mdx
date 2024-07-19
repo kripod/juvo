@@ -1,7 +1,9 @@
 import { Unstyled } from "@storybook/blocks";
 
 import { Alert } from "../components/Alert";
+import { ButtonPlain } from "../components/ButtonPlain";
 import { ButtonPrimary } from "../components/ButtonPrimary";
+import { ButtonSecondary } from "../components/ButtonSecondary";
 import { ButtonTertiary } from "../components/ButtonTertiary";
 import { Input } from "../components/Input";
 
@@ -21,6 +23,20 @@ import { Input } from "../components/Input";
     <Alert type="danger">This is an alert.</Alert>
     <Alert type="success">This is an alert.</Alert>
     <Alert type="warning">This is an alert.</Alert>
+    <div className="grid grid-cols-[repeat(3,auto)] justify-start justify-items-center gap-4">
+      <ButtonPrimary color="neutral">Neutral</ButtonPrimary>
+      <ButtonPrimary color="accent">Accent</ButtonPrimary>
+      <div />
+      <ButtonSecondary color="neutral">Neutral</ButtonSecondary>
+      <div />
+      <ButtonSecondary color="danger">Danger</ButtonSecondary>
+      <ButtonTertiary color="neutral">Neutral</ButtonTertiary>
+      <ButtonTertiary color="accent">Accent</ButtonTertiary>
+      <ButtonTertiary color="danger">Danger</ButtonTertiary>
+      <ButtonPlain color="neutral">Neutral</ButtonPlain>
+      <ButtonPlain color="accent">Accent</ButtonPlain>
+      <div />
+    </div>
     <div>This is just a block of text.</div>
     <div className="flex gap-2">
       <Input size="sm" placeholder="Placeholder" />
