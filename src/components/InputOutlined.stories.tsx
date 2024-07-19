@@ -12,8 +12,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Basic = {
   args: {
-    defaultValue: "",
     placeholder: "Placeholder",
+    defaultValue: "",
     "aria-invalid": false,
     readOnly: false,
     disabled: false,
