@@ -3,14 +3,14 @@ import { forwardRef } from "react";
 
 import { controlClassName } from "../utils/controlClassName";
 
-export interface InputProps
+export interface InputOutlinedProps
   extends Omit<React.ComponentPropsWithRef<"input">, "size"> {
   size?: "sm" | "md" | "lg";
   shape?: "rectangle" | "pill";
 }
 
-export const Input = forwardRef(function Input(
-  { size = "md", shape = "rectangle", className, ...props }: InputProps,
+export const InputOutlined = forwardRef(function InputOutlined(
+  { size = "md", shape = "rectangle", className, ...props }: InputOutlinedProps,
   ref: React.ForwardedRef<HTMLInputElement>,
 ) {
   return (

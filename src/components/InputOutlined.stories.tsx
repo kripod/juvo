@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { userEvent } from "@storybook/test";
 
-import { Input } from "./Input";
+import { InputOutlined } from "./InputOutlined";
 
 const meta = {
-  component: Input,
-} satisfies Meta<typeof Input>;
+  component: InputOutlined,
+} satisfies Meta<typeof InputOutlined>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -23,11 +23,11 @@ export const Basic = {
 export const Interactivity = {
   render: () => (
     <div className="flex flex-col items-start gap-4">
-      <Input defaultValue="Focused" />
-      <Input defaultValue="Invalid" aria-invalid />
-      <Input value="Read-only" readOnly />
-      <Input placeholder="Placeholder" />
-      <Input value="Disabled" disabled />
+      <InputOutlined defaultValue="Focused" />
+      <InputOutlined defaultValue="Invalid" aria-invalid />
+      <InputOutlined value="Read-only" readOnly />
+      <InputOutlined placeholder="Placeholder" />
+      <InputOutlined value="Disabled" disabled />
     </div>
   ),
   play: async () => {
@@ -38,9 +38,9 @@ export const Interactivity = {
 export const Sizes = {
   render: () => (
     <div className="flex flex-col items-start gap-4">
-      <Input size="sm" placeholder="Small" />
-      <Input size="md" placeholder="Medium" />
-      <Input size="lg" placeholder="Large" />
+      <InputOutlined size="sm" placeholder="Small" />
+      <InputOutlined size="md" placeholder="Medium" />
+      <InputOutlined size="lg" placeholder="Large" />
     </div>
   ),
 } satisfies Story;
@@ -48,8 +48,8 @@ export const Sizes = {
 export const Shapes = {
   render: () => (
     <div className="flex flex-col items-start gap-4">
-      <Input shape="rectangle" placeholder="Rectangle" />
-      <Input shape="pill" placeholder="Pill" />
+      <InputOutlined shape="rectangle" placeholder="Rectangle" />
+      <InputOutlined shape="pill" placeholder="Pill" />
     </div>
   ),
 } satisfies Story;

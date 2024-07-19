@@ -16,7 +16,7 @@
         "ButtonPrimary": "button",
         "ButtonSecondary": "button",
         "ButtonTertiary": "button",
-        "Input": "input"
+        "InputOutlined": "input"
       }
     }
   },
