@@ -32,7 +32,7 @@ export const Input = forwardRef(function Input(
         <InputGroupAddon
           className={clsx(
             "justify-self-start",
-            size === "sm" && "px-2.5 pe-1",
+            size === "sm" && "px-2.5 pe-1.5",
             size === "md" && "px-3 pe-1.5",
             size === "lg" && "px-4 pe-2",
           )}
@@ -64,7 +64,7 @@ export const Input = forwardRef(function Input(
         <InputGroupAddon
           className={clsx(
             "justify-self-end",
-            size === "sm" && "px-2.5 ps-1",
+            size === "sm" && "px-2.5 ps-1.5",
             size === "md" && "px-3 ps-1.5",
             size === "lg" && "px-4 ps-2",
           )}
