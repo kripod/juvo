@@ -1,6 +1,7 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { ButtonPlain } from "./ButtonPlain";
 import { ButtonSecondary } from "./ButtonSecondary";
 import { InputFilled } from "./InputFilled";
 import { InputGroup } from "./InputGroup";
@@ -20,9 +21,9 @@ export const WithInputOutlined = {
   args: {
     addonStart: <MagnifyingGlassIcon className="size-6" />,
     addonEnd: (
-      <ButtonSecondary size="sm" shape="pill">
+      <ButtonPlain size="sm" shape="pill">
         Go
-      </ButtonSecondary>
+      </ButtonPlain>
     ),
   },
   render: (args) => (
