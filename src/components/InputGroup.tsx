@@ -28,7 +28,7 @@ export function InputGroup({
         <fieldset
           disabled={disabled}
           className={clsx(
-            "inline-grid items-center *:col-start-1 *:row-start-1",
+            "group/input inline-grid items-center *:col-start-1 *:row-start-1",
           )}
         >
           {children}
@@ -59,14 +59,10 @@ export function InputGroupAddon({
   });
 
   return (
-    <span
-      ref={ref}
-      className={clsx(
-        className,
-        "pointer-events-none z-10 text-ui-neutral-950/65 *:pointer-events-auto",
-      )}
-    >
-      {children}
+    <span ref={ref} className={clsx(className, "pointer-events-none z-10")}>
+      <span className="pointer-events-auto text-ui-neutral-950/65 transition group-disabled/input:text-ui-neutral-950/20">
+        {children}
+      </span>
     </span>
   );
 }
