@@ -59,10 +59,14 @@ export function InputGroupAddon({
   });
 
   return (
-    <span ref={ref} className={clsx(className, "pointer-events-none z-10")}>
-      <span className="pointer-events-auto text-ui-neutral-950/65 transition group-disabled/input:text-ui-neutral-950/20">
-        {children}
-      </span>
+    <span
+      ref={ref}
+      className={clsx(
+        className,
+        "pointer-events-none z-10 text-ui-neutral-950/65 transition *:pointer-events-auto disabled:*:opacity-100 group-disabled/input:opacity-35",
+      )}
+    >
+      {children}
     </span>
   );
 }
