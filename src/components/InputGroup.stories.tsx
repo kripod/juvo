@@ -26,7 +26,7 @@ export const WithInputOutlined = {
   },
   render: (args) => (
     <InputGroup {...args}>
-      <InputOutlined size="lg" shape="pill" placeholder="Search…" />
+      <InputOutlined placeholder="Search…" />
     </InputGroup>
   ),
 } satisfies Story;
