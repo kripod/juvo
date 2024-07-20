@@ -63,7 +63,7 @@ export function InputGroupAddon({
       ref={ref}
       className={clsx(
         className,
-        "pointer-events-none z-10 text-ui-neutral-950/65 transition *:pointer-events-auto disabled:*:opacity-100 group-disabled/input:opacity-35",
+        "pointer-events-none z-10 text-ui-neutral-950/65 transition disabled:*:opacity-100 group-disabled/input:opacity-35",
       )}
     >
       {children}

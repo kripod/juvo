@@ -11,7 +11,7 @@ function isEquilateral(shape: ControlProps["shape"]) {
 
 export function controlClassName({ size, shape }: ControlProps) {
   return clsx(
-    "transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-ui-accent-600 disabled:pointer-events-none disabled:opacity-35",
+    "pointer-events-auto transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-ui-accent-600 disabled:pointer-events-none disabled:opacity-35",
     size === "sm" && clsx("h-8 text-base/none", isEquilateral(shape) && "w-8"),
     size === "md" &&
       clsx("h-10 text-base/none", isEquilateral(shape) && "w-10"),
