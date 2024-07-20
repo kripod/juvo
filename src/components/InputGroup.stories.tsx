@@ -2,6 +2,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { ButtonSecondary } from "./ButtonSecondary";
+import { InputFilled } from "./InputFilled";
 import { InputGroup } from "./InputGroup";
 import { InputOutlined } from "./InputOutlined";
 
@@ -27,6 +28,22 @@ export const WithInputOutlined = {
   render: (args) => (
     <InputGroup {...args}>
       <InputOutlined placeholder="Search…" />
+    </InputGroup>
+  ),
+} satisfies Story;
+
+export const WithInputFilled = {
+  args: {
+    addonStart: <MagnifyingGlassIcon className="size-6" />,
+    addonEnd: (
+      <ButtonSecondary size="sm" shape="pill">
+        Go
+      </ButtonSecondary>
+    ),
+  },
+  render: (args) => (
+    <InputGroup {...args}>
+      <InputFilled placeholder="Search…" />
     </InputGroup>
   ),
 } satisfies Story;
