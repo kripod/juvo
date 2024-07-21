@@ -55,6 +55,12 @@ export const Input = forwardRef(function Input(
         size === "md" && "px-2",
         size === "lg" && "px-2.5",
       )}
+      onClickCapture={(event) => {
+        // Increase target size of input
+        if (event.target === event.currentTarget) {
+          localRef.current.focus({ preventScroll: true });
+        }
+      }}
     >
       {addonStart}
       {input}

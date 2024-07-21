@@ -19,7 +19,7 @@ type Story = StoryObj<typeof meta>;
 
 export const WithInputOutlined = {
   args: {
-    addonStart: <MagnifyingGlassIcon className="size-6" />,
+    addonStart: <MagnifyingGlassIcon className="pointer-events-none size-6" />,
     addonEnd: (
       <ButtonPlain size="sm" shape="pill">
         Go
@@ -35,7 +35,7 @@ export const WithInputOutlined = {
 
 export const WithInputFilled = {
   args: {
-    addonStart: <MagnifyingGlassIcon className="size-6" />,
+    addonStart: <MagnifyingGlassIcon className="pointer-events-none size-6" />,
     addonEnd: (
       <ButtonSecondary size="sm" shape="pill">
         Go
