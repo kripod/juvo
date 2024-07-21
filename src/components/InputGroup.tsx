@@ -1,7 +1,4 @@
-import { clsx } from "clsx/lite";
-import { createContext, useRef } from "react";
-
-import { useResizeObserver } from "../hooks/useResizeObserver";
+import { createContext } from "react";
 
 export interface InputGroupProps {
   addonStart?: React.ReactNode;
@@ -16,6 +13,9 @@ export const InputGroupAddonStartContext =
 export const InputGroupAddonEndContext =
   createContext<InputGroupProps["addonEnd"]>(null);
 
+export const InputGroupDisabledContext =
+  createContext<InputGroupProps["disabled"]>(false);
+
 export function InputGroup({
   addonStart,
   addonEnd,
@@ -25,48 +25,10 @@ export function InputGroup({
   return (
     <InputGroupAddonStartContext.Provider value={addonStart}>
       <InputGroupAddonEndContext.Provider value={addonEnd}>
-        <fieldset
-          disabled={disabled}
-          className={clsx(
-            "group/input inline-grid items-center *:col-start-1 *:row-start-1",
-          )}
-        >
+        <InputGroupDisabledContext.Provider value={disabled}>
           {children}
-        </fieldset>
+        </InputGroupDisabledContext.Provider>
       </InputGroupAddonEndContext.Provider>
     </InputGroupAddonStartContext.Provider>
-  );
-}
-
-export interface InputGroupAddonProps {
-  className?: string;
-  children?: React.ReactNode;
-  onWidthChange: (value: number) => void;
-}
-
-export function InputGroupAddon({
-  className,
-  children,
-  onWidthChange,
-}: InputGroupAddonProps) {
-  const ref = useRef<HTMLSpanElement>(null);
-  useResizeObserver(ref, (entry) => {
-    onWidthChange(
-      // TODO: Remove fallback once most browsers support `borderBoxSize`
-      entry.borderBoxSize?.[0]?.inlineSize ??
-        entry.target.getBoundingClientRect().width,
-    );
-  });
-
-  return (
-    <span
-      ref={ref}
-      className={clsx(
-        className,
-        "pointer-events-none z-10 text-ui-neutral-950/65 transition disabled:*:opacity-100 group-disabled/input:opacity-35",
-      )}
-    >
-      {children}
-    </span>
   );
 }

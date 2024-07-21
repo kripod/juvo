@@ -1,11 +1,11 @@
 import { clsx } from "clsx/lite";
 import { forwardRef, useContext, useImperativeHandle, useRef } from "react";
 
-import { controlClassName } from "../utils/controlClassName";
+import { textBoxClassName } from "../utils/controlClassName";
 import {
-  InputGroupAddon,
   InputGroupAddonEndContext,
   InputGroupAddonStartContext,
+  InputGroupDisabledContext,
 } from "./InputGroup";
 
 export interface InputProps
@@ -21,63 +21,46 @@ export const Input = forwardRef(function Input(
   const localRef = useRef<HTMLInputElement>(null as never);
   useImperativeHandle(ref, () => localRef.current, []);
 
+  const groupDisabled = useContext(InputGroupDisabledContext);
   const addonStart = useContext(InputGroupAddonStartContext);
   const addonEnd = useContext(InputGroupAddonEndContext);
-  const shape =
-    shapeRaw ?? (addonStart != null || addonEnd != null ? "pill" : "rectangle");
 
-  return (
-    <>
-      {addonStart != null ? (
-        <InputGroupAddon
-          className={clsx(
-            "justify-self-start",
-            size === "sm" && "px-2.5 pe-1.5",
-            size === "md" && "px-3 pe-1.5",
-            size === "lg" && "px-4 pe-2",
-          )}
-          onWidthChange={(value) => {
-            localRef.current.style.setProperty(
-              "padding-inline-start",
-              `${value}px`,
-            );
-          }}
-        >
-          {addonStart}
-        </InputGroupAddon>
-      ) : null}
+  const grouped = addonStart != null || addonEnd != null;
+  const shape = shapeRaw ?? (grouped ? "pill" : "rectangle");
 
-      <input
-        ref={localRef}
-        className={clsx(
-          className,
-          controlClassName({ size, shape }),
-          "text-ui-neutral-950 placeholder:text-ui-neutral-950/65 aria-invalid:ring-2 aria-invalid:ring-inset aria-invalid:ring-ui-danger-600",
-          size === "sm" && "px-2.5",
-          size === "md" && "px-3",
-          size === "lg" && "px-4",
-        )}
-        {...props}
-      />
+  const input = (
+    <input
+      ref={localRef}
+      className={clsx(
+        grouped
+          ? "self-stretch bg-transparent focus:[outline:none]"
+          : clsx(className, textBoxClassName({ size, shape })),
+        "text-ui-neutral-950 placeholder:text-ui-neutral-950/65",
+        size === "sm" && (grouped ? "px-1" : "px-2.5"),
+        size === "md" && (grouped ? "px-1" : "px-3"),
+        size === "lg" && (grouped ? "px-1.5" : "px-4"),
+      )}
+      {...props}
+    />
+  );
 
-      {addonEnd != null ? (
-        <InputGroupAddon
-          className={clsx(
-            "justify-self-end",
-            size === "sm" && "px-2.5 ps-1.5",
-            size === "md" && "px-3 ps-1.5",
-            size === "lg" && "px-4 ps-2",
-          )}
-          onWidthChange={(value) => {
-            localRef.current.style.setProperty(
-              "padding-inline-end",
-              `${value}px`,
-            );
-          }}
-        >
-          {addonEnd}
-        </InputGroupAddon>
-      ) : null}
-    </>
+  return grouped ? (
+    <fieldset
+      disabled={groupDisabled}
+      className={clsx(
+        className,
+        textBoxClassName({ size, shape }),
+        "inline-flex items-center text-ui-neutral-950/65 focus-within:outline focus-within:outline-2 focus-within:outline-offset-1 focus-within:outline-ui-accent-600 disabled:*:opacity-100 has-[:not(input):focus]:[outline:none]",
+        size === "sm" && "px-1.5",
+        size === "md" && "px-2",
+        size === "lg" && "px-2.5",
+      )}
+    >
+      {addonStart}
+      {input}
+      {addonEnd}
+    </fieldset>
+  ) : (
+    input
   );
 });
