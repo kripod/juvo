@@ -33,7 +33,7 @@ export const Input = forwardRef(function Input(
       ref={localRef}
       className={clsx(
         grouped
-          ? "self-stretch bg-transparent focus:[outline:none]"
+          ? "flex-1 self-stretch bg-transparent focus:[outline:none]"
           : clsx(className, textBoxClassName({ size, shape })),
         "text-ui-neutral-950 placeholder:text-ui-neutral-950/65",
         size === "sm" && (grouped ? "px-1" : "px-2.5"),
