@@ -5,7 +5,7 @@ import { controlClassName } from "../utils/controlClassName";
 
 export interface ButtonProps extends React.ComponentPropsWithRef<"button"> {
   render?: (props: React.ComponentPropsWithRef<"button">) => React.ReactNode;
-  size?: "auto" | "sm" | "md" | "lg";
+  size?: "auto" | "xs" | "sm" | "md" | "lg";
   iconStart?: React.ReactNode;
   iconEnd?: React.ReactNode;
   shape?: "rectangle" | "pill" | "square" | "circle";
@@ -37,6 +37,7 @@ export const Button = forwardRef(function Button(
       size !== "auto" &&
         clsx(
           "inline-flex items-center justify-center text-center",
+          size === "xs" && "gap-0.5",
           size === "sm" && "gap-1",
           size === "md" && "gap-1",
           size === "lg" && "gap-1.5",

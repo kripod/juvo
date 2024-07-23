@@ -39,6 +39,7 @@ export const Sizes = {
   ...Basic,
   render: () => (
     <div className="flex flex-col items-start gap-4">
+      <ButtonPlain size="xs">Extra small</ButtonPlain>
       <ButtonPlain size="sm">Small</ButtonPlain>
       <ButtonPlain size="md">Medium</ButtonPlain>
       <ButtonPlain size="lg">Large</ButtonPlain>
@@ -50,6 +51,9 @@ export const WithIcon = {
   ...Basic,
   render: () => (
     <div className="flex flex-col items-start gap-4">
+      <ButtonPlain size="xs" iconStart={<PlusIcon16 className="size-4" />}>
+        Add item
+      </ButtonPlain>
       <ButtonPlain size="sm" iconStart={<PlusIcon16 className="size-4" />}>
         Add item
       </ButtonPlain>

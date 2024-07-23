@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 import { Button, type ButtonProps } from "./Button";
 
 export interface ButtonPrimaryProps extends ButtonProps {
-  size?: "sm" | "md" | "lg";
+  size?: "xs" | "sm" | "md" | "lg";
   shape?: "rectangle" | "pill" | "square" | "circle";
   color?: "neutral" | "accent";
 }
@@ -20,6 +20,7 @@ export const ButtonPrimary = forwardRef(function ButtonPrimary(
       className={clsx(
         className,
         "font-medium",
+        size === "xs" && "px-1.5",
         size === "sm" && "px-2.5",
         size === "md" && "px-4",
         size === "lg" && "px-6",
