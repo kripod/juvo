@@ -20,7 +20,7 @@ export const ButtonPlain = forwardRef(function ButtonPlain(
       className={clsx(
         className,
         "font-medium",
-        size === "xs" && "px-1.5",
+        size === "xs" && "px-2",
         size === "sm" && "px-2.5",
         size === "md" && "px-3",
         size === "lg" && "px-4",
