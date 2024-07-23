@@ -1,8 +1,8 @@
+import { PaperAirplaneIcon } from "@heroicons/react/16/solid";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ButtonPlain } from "./ButtonPlain";
-import { ButtonSecondary } from "./ButtonSecondary";
+import { ButtonPrimary } from "./ButtonPrimary";
 import { InputFilled } from "./InputFilled";
 import { InputGroup } from "./InputGroup";
 import { InputOutlined } from "./InputOutlined";
@@ -20,11 +20,6 @@ type Story = StoryObj<typeof meta>;
 export const WithInputOutlined = {
   args: {
     addonStart: <MagnifyingGlassIcon className="pointer-events-none size-6" />,
-    addonEnd: (
-      <ButtonPlain size="sm" shape="pill">
-        Go
-      </ButtonPlain>
-    ),
   },
   render: (args) => (
     <InputGroup {...args}>
@@ -35,16 +30,15 @@ export const WithInputOutlined = {
 
 export const WithInputFilled = {
   args: {
-    addonStart: <MagnifyingGlassIcon className="pointer-events-none size-6" />,
     addonEnd: (
-      <ButtonSecondary size="sm" shape="pill">
-        Go
-      </ButtonSecondary>
+      <ButtonPrimary title="Send" size="xs" shape="circle" color="accent">
+        <PaperAirplaneIcon className="size-4" />
+      </ButtonPrimary>
     ),
   },
   render: (args) => (
     <InputGroup {...args}>
-      <InputFilled placeholder="Search…" />
+      <InputFilled placeholder="Message" />
     </InputGroup>
   ),
 } satisfies Story;
