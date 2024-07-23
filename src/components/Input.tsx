@@ -36,7 +36,7 @@ export const Input = forwardRef(function Input(
           ? "flex-1 self-stretch bg-transparent focus:[outline:none]"
           : clsx(className, textBoxClassName({ size, shape })),
         "text-ui-neutral-950 placeholder:text-ui-neutral-950/65",
-        size === "sm" && (grouped ? "px-1" : "px-2.5"),
+        size === "sm" && (grouped ? "px-0.5" : "px-2.5"),
         size === "md" && (grouped ? "px-1" : "px-3"),
         size === "lg" && (grouped ? "px-1" : "px-4"),
       )}
@@ -51,7 +51,7 @@ export const Input = forwardRef(function Input(
         className,
         textBoxClassName({ size, shape }),
         "inline-flex items-center text-ui-neutral-950/65 focus-within:outline focus-within:outline-2 focus-within:outline-offset-1 focus-within:outline-ui-accent-600 disabled:*:opacity-100 has-[:not(input):focus]:[outline:none]",
-        size === "sm" && "px-1.5",
+        size === "sm" && "px-2",
         size === "md" && "px-2",
         size === "lg" && "px-3",
       )}

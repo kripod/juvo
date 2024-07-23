@@ -1,8 +1,8 @@
+import { PlusIcon as PlusIcon16 } from "@heroicons/react/16/solid";
 import {
   Bars3BottomLeftIcon,
-  PlusIcon as PlusIcon16,
-} from "@heroicons/react/16/solid";
-import { PlusIcon as PlusIcon24 } from "@heroicons/react/24/solid";
+  PlusIcon as PlusIcon24,
+} from "@heroicons/react/24/solid";
 import type { Meta, StoryObj } from "@storybook/react";
 import { userEvent } from "@storybook/test";
 
@@ -57,7 +57,7 @@ export const WithIcon = {
       <ButtonPlain size="sm" iconStart={<PlusIcon16 className="size-4" />}>
         Add item
       </ButtonPlain>
-      <ButtonPlain size="md" iconStart={<PlusIcon16 className="size-4" />}>
+      <ButtonPlain size="md" iconStart={<PlusIcon24 className="size-6" />}>
         Add item
       </ButtonPlain>
       <ButtonPlain size="lg" iconStart={<PlusIcon24 className="size-6" />}>
@@ -74,10 +74,10 @@ export const Shapes = {
       <ButtonPlain shape="rectangle">Rectangle</ButtonPlain>
       <ButtonPlain shape="pill">Pill</ButtonPlain>
       <ButtonPlain shape="square">
-        <Bars3BottomLeftIcon className="size-4" />
+        <Bars3BottomLeftIcon className="size-6" />
       </ButtonPlain>
       <ButtonPlain shape="circle">
-        <Bars3BottomLeftIcon className="size-4" />
+        <Bars3BottomLeftIcon className="size-6" />
       </ButtonPlain>
     </div>
   ),
