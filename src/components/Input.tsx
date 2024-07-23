@@ -38,7 +38,7 @@ export const Input = forwardRef(function Input(
         "text-ui-neutral-950 placeholder:text-ui-neutral-950/65",
         size === "sm" && (grouped ? "px-1" : "px-2.5"),
         size === "md" && (grouped ? "px-1" : "px-3"),
-        size === "lg" && (grouped ? "px-1.5" : "px-4"),
+        size === "lg" && (grouped ? "px-1" : "px-4"),
       )}
       {...props}
     />
@@ -53,7 +53,7 @@ export const Input = forwardRef(function Input(
         "inline-flex items-center text-ui-neutral-950/65 focus-within:outline focus-within:outline-2 focus-within:outline-offset-1 focus-within:outline-ui-accent-600 disabled:*:opacity-100 has-[:not(input):focus]:[outline:none]",
         size === "sm" && "px-1.5",
         size === "md" && "px-2",
-        size === "lg" && "px-2.5",
+        size === "lg" && "px-3",
       )}
       onClickCapture={(event) => {
         // Increase target size of input
