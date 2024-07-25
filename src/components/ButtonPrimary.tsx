@@ -27,7 +27,7 @@ export const ButtonPrimary = forwardRef(function ButtonPrimary(
         color === "neutral" &&
           "bg-ui-neutral-900 text-ui-neutral-50 active:bg-ui-neutral-950",
         color === "accent" &&
-          "bg-ui-accent-600 text-ui-accent-50 active:bg-ui-accent-700",
+          "bg-ui-accent-700 text-ui-accent-50 active:bg-ui-accent-800",
       )}
       {...props}
     />
