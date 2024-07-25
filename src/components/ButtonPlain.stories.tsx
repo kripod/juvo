@@ -73,10 +73,10 @@ export const Shapes = {
     <div className="flex flex-col items-start gap-4">
       <ButtonPlain shape="rectangle">Rectangle</ButtonPlain>
       <ButtonPlain shape="pill">Pill</ButtonPlain>
-      <ButtonPlain shape="square">
+      <ButtonPlain shape="square" title="Left align">
         <Bars3BottomLeftIcon className="size-6" />
       </ButtonPlain>
-      <ButtonPlain shape="circle">
+      <ButtonPlain shape="circle" title="Left align">
         <Bars3BottomLeftIcon className="size-6" />
       </ButtonPlain>
     </div>
