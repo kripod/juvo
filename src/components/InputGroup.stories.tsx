@@ -31,7 +31,7 @@ export const WithInputOutlined = {
 export const WithInputFilled = {
   args: {
     addonEnd: (
-      <ButtonPrimary title="Send" size="xs" shape="circle" color="accent">
+      <ButtonPrimary size="xs" shape="circle" color="accent" title="Send">
         <PaperAirplaneIcon className="size-4" />
       </ButtonPrimary>
     ),
