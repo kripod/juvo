@@ -15,7 +15,7 @@ export function controlClassName({ size, shape }: ControlProps) {
     size === "xs" && clsx("h-6 text-sm/none", isEquilateral(shape) && "w-6"),
     size === "sm" && clsx("h-8 text-base/none", isEquilateral(shape) && "w-8"),
     size === "md" &&
-      clsx("h-11 text-base/none", isEquilateral(shape) && "w-11"),
+      clsx("h-10 text-base/none", isEquilateral(shape) && "w-10"),
     size === "lg" && clsx("h-14 text-xl/none", isEquilateral(shape) && "w-14"),
     (shape === "rectangle" || shape === "square") &&
       clsx(
