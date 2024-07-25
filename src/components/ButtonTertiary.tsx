@@ -24,9 +24,10 @@ export const ButtonTertiary = forwardRef(function ButtonTertiary(
         size === "sm" && "px-2.5",
         size === "md" && "px-4",
         size === "lg" && "px-6",
-        color === "neutral" && "text-ui-neutral-950 active:bg-ui-neutral-100",
-        color === "accent" && "text-ui-accent-700 active:bg-ui-accent-100",
-        color === "danger" && "text-ui-danger-700 active:bg-ui-danger-100",
+        color === "neutral" &&
+          "text-ui-neutral-950 active:bg-ui-neutral-400/25",
+        color === "accent" && "text-ui-accent-700 active:bg-ui-accent-400/25",
+        color === "danger" && "text-ui-danger-700 active:bg-ui-danger-400/25",
       )}
       {...props}
     />

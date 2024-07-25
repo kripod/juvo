@@ -24,8 +24,9 @@ export const ButtonPlain = forwardRef(function ButtonPlain(
         size === "sm" && "px-2.5",
         size === "md" && "px-3",
         size === "lg" && "px-4",
-        color === "neutral" && "text-ui-neutral-950 active:bg-ui-neutral-100",
-        color === "accent" && "text-ui-accent-700 active:bg-ui-accent-100",
+        color === "neutral" &&
+          "text-ui-neutral-950 active:bg-ui-neutral-400/25",
+        color === "accent" && "text-ui-accent-700 active:bg-ui-accent-400/25",
       )}
       {...props}
     />
