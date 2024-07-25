@@ -22,7 +22,7 @@ export const ButtonPlain = forwardRef(function ButtonPlain(
         "font-medium",
         size === "xs" && "px-2",
         size === "sm" && "px-2.5",
-        size === "md" && "px-3",
+        size === "md" && "px-3.5",
         size === "lg" && "px-4",
         color === "neutral" &&
           "text-ui-neutral-950 active:bg-ui-neutral-400/25",
