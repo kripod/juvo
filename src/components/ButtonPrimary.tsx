@@ -21,7 +21,7 @@ export const ButtonPrimary = forwardRef(function ButtonPrimary(
         className,
         "font-medium",
         size === "xs" && "px-2",
-        size === "sm" && "px-2.5",
+        size === "sm" && "px-3",
         size === "md" && "px-4",
         size === "lg" && "px-6",
         color === "neutral" &&
