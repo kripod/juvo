@@ -13,7 +13,7 @@ export const InputFilled = forwardRef(function InputFilled(
     <Input
       ref={ref}
       size={size}
-      className={clsx(className, "bg-ui-neutral-200")}
+      className={clsx(className, "bg-ui-neutral-300/40")}
       {...props}
     />
   );
