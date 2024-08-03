@@ -15,15 +15,31 @@ export default {
   ],
   parameters: {
     backgrounds: {
-      default: "neutral-0",
+      default: "neutral",
       values: [
         {
-          name: "neutral-0",
+          name: "neutral",
           value: "oklch(var(--color-neutral-50))",
         },
         {
-          name: "neutral-1",
-          value: "oklch(var(--color-neutral-100))",
+          name: "accent",
+          value: "oklch(var(--color-accent-100))",
+        },
+        {
+          name: "info",
+          value: "oklch(var(--color-info-100))",
+        },
+        {
+          name: "danger",
+          value: "oklch(var(--color-danger-100))",
+        },
+        {
+          name: "success",
+          value: "oklch(var(--color-success-100))",
+        },
+        {
+          name: "warning",
+          value: "oklch(var(--color-warning-100))",
         },
       ],
       grid: {
