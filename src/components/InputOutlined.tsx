@@ -15,7 +15,7 @@ export const InputOutlined = forwardRef(function InputOutlined(
       size={size}
       className={clsx(
         className,
-        "bg-ui-neutral-50 ring-1 ring-inset ring-ui-neutral-600",
+        "bg-ui-neutral-50/65 ring-1 ring-inset ring-ui-neutral-600",
       )}
       {...props}
     />
