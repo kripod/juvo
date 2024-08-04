@@ -9,10 +9,6 @@ import { TextBoxGroup } from "./TextBoxGroup";
 
 const meta = {
   component: TextBoxGroup,
-  subcomponents: {
-    InputFilled: InputFilled as React.ComponentType<unknown>,
-    InputOutlined: InputOutlined as React.ComponentType<unknown>,
-  },
 } satisfies Meta<typeof TextBoxGroup>;
 
 export default meta;
