@@ -4,15 +4,15 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { ButtonPrimary } from "./ButtonPrimary";
 import { InputFilled } from "./InputFilled";
-import { InputGroup } from "./InputGroup";
 import { InputOutlined } from "./InputOutlined";
+import { TextBoxGroup } from "./TextBoxGroup";
 
 const meta = {
-  component: InputGroup,
+  component: TextBoxGroup,
   subcomponents: {
     InputOutlined: InputOutlined as React.ComponentType<unknown>,
   },
-} satisfies Meta<typeof InputGroup>;
+} satisfies Meta<typeof TextBoxGroup>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -22,9 +22,9 @@ export const WithInputOutlined = {
     addonStart: <MagnifyingGlassIcon className="pointer-events-none size-6" />,
   },
   render: (args) => (
-    <InputGroup {...args}>
+    <TextBoxGroup {...args}>
       <InputOutlined placeholder="Search…" />
-    </InputGroup>
+    </TextBoxGroup>
   ),
 } satisfies Story;
 
@@ -37,8 +37,8 @@ export const WithInputFilled = {
     ),
   },
   render: (args) => (
-    <InputGroup {...args}>
+    <TextBoxGroup {...args}>
       <InputFilled placeholder="Message" />
-    </InputGroup>
+    </TextBoxGroup>
   ),
 } satisfies Story;

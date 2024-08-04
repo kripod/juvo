@@ -13,8 +13,11 @@ export {
   type ButtonTertiaryProps,
 } from "./components/ButtonTertiary";
 export { InputFilled, type InputFilledProps } from "./components/InputFilled";
-export { InputGroup, type InputGroupProps } from "./components/InputGroup";
 export {
   InputOutlined,
   type InputOutlinedProps,
 } from "./components/InputOutlined";
+export {
+  TextBoxGroup,
+  type TextBoxGroupProps,
+} from "./components/TextBoxGroup";

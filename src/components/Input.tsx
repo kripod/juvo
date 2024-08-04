@@ -3,10 +3,10 @@ import { forwardRef, useContext, useImperativeHandle, useRef } from "react";
 
 import { textBoxClassName } from "../utils/controlClassName";
 import {
-  InputGroupAddonEndContext,
-  InputGroupAddonStartContext,
-  InputGroupDisabledContext,
-} from "./InputGroup";
+  TextBoxGroupAddonEndContext,
+  TextBoxGroupAddonStartContext,
+  TextBoxGroupDisabledContext,
+} from "./TextBoxGroup";
 
 export interface InputProps
   extends Omit<React.ComponentPropsWithRef<"input">, "size"> {
@@ -21,9 +21,9 @@ export const Input = forwardRef(function Input(
   const localRef = useRef<HTMLInputElement>(null as never);
   useImperativeHandle(ref, () => localRef.current, []);
 
-  const groupDisabled = useContext(InputGroupDisabledContext);
-  const addonStart = useContext(InputGroupAddonStartContext);
-  const addonEnd = useContext(InputGroupAddonEndContext);
+  const groupDisabled = useContext(TextBoxGroupDisabledContext);
+  const addonStart = useContext(TextBoxGroupAddonStartContext);
+  const addonEnd = useContext(TextBoxGroupAddonEndContext);
 
   const grouped = addonStart != null || addonEnd != null;
   const shape = shapeRaw ?? (grouped ? "pill" : "rectangle");
