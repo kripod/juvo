@@ -28,7 +28,7 @@ export const Input = forwardRef(function Input(
   const grouped = addonStart != null || addonEnd != null;
   const shape = shapeRaw ?? (grouped ? "pill" : "rectangle");
 
-  const input = (
+  const control = (
     <input
       ref={localRef}
       className={clsx(
@@ -56,17 +56,17 @@ export const Input = forwardRef(function Input(
         size === "lg" && "px-3",
       )}
       onClickCapture={(event) => {
-        // Increase target size of input
+        // Increase target size of control
         if (event.target === event.currentTarget) {
           localRef.current.focus({ preventScroll: true });
         }
       }}
     >
       {addonStart}
-      {input}
+      {control}
       {addonEnd}
     </fieldset>
   ) : (
-    input
+    control
   );
 });
