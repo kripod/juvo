@@ -61,9 +61,10 @@ export const Input = forwardRef(function Input(
           size === "lg" && "px-3",
           groupDisabled && "*:opacity-100",
         )}
-        onClickCapture={(event) => {
+        onPointerDown={(event) => {
           // Increase target size of control
           if (event.target === event.currentTarget) {
+            event.preventDefault();
             localRef.current.focus({ preventScroll: true });
           }
         }}
