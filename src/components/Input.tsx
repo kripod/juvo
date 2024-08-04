@@ -50,7 +50,7 @@ export const Input = forwardRef(function Input(
       className={clsx(
         className,
         textBoxClassName({ size, shape }),
-        "inline-flex items-center text-ui-neutral-950/65 focus-within:outline focus-within:outline-2 focus-within:outline-offset-1 focus-within:outline-ui-accent-600 disabled:*:opacity-100 has-[:not(input):focus]:[outline:none]",
+        "inline-flex cursor-text items-center text-ui-neutral-950/65 focus-within:outline focus-within:outline-2 focus-within:outline-offset-1 focus-within:outline-ui-accent-600 disabled:*:opacity-100 has-[:not(input):focus]:[outline:none]",
         size === "sm" && "px-2",
         size === "md" && "px-2",
         size === "lg" && "px-3",
