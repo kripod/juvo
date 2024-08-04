@@ -17,17 +17,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const WithInputOutlined = {
-  args: {
-    addonStart: <MagnifyingGlassIcon className="pointer-events-none size-6" />,
-  },
-  render: (args) => (
-    <TextBoxGroup {...args}>
-      <InputOutlined placeholder="Search…" />
-    </TextBoxGroup>
-  ),
-} satisfies Story;
-
 export const WithInputFilled = {
   args: {
     addonEnd: (
@@ -39,6 +28,17 @@ export const WithInputFilled = {
   render: (args) => (
     <TextBoxGroup {...args}>
       <InputFilled placeholder="Message" />
+    </TextBoxGroup>
+  ),
+} satisfies Story;
+
+export const WithInputOutlined = {
+  args: {
+    addonStart: <MagnifyingGlassIcon className="pointer-events-none size-6" />,
+  },
+  render: (args) => (
+    <TextBoxGroup {...args}>
+      <InputOutlined placeholder="Search…" />
     </TextBoxGroup>
   ),
 } satisfies Story;
