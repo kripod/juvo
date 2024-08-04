@@ -50,21 +50,28 @@ export const Input = forwardRef(function Input(
       className={clsx(
         className,
         textBoxClassName({ size, shape }),
-        "inline-flex cursor-text items-center text-ui-neutral-950/65 focus-within:outline focus-within:outline-2 focus-within:outline-offset-1 focus-within:outline-ui-accent-600 disabled:*:opacity-100 has-[:not(input):focus]:[outline:none]",
-        size === "sm" && "px-2",
-        size === "md" && "px-2",
-        size === "lg" && "px-3",
+        "overflow-hidden focus-within:outline focus-within:outline-2 focus-within:outline-offset-1 focus-within:outline-ui-accent-600 has-[:not(input):focus]:[outline:none]",
       )}
-      onClickCapture={(event) => {
-        // Increase target size of control
-        if (event.target === event.currentTarget) {
-          localRef.current.focus({ preventScroll: true });
-        }
-      }}
     >
-      {addonStart}
-      {control}
-      {addonEnd}
+      <div
+        className={clsx(
+          "flex min-h-[inherit] cursor-text items-center text-ui-neutral-950/65",
+          size === "sm" && "px-2",
+          size === "md" && "px-2",
+          size === "lg" && "px-3",
+          groupDisabled && "*:opacity-100",
+        )}
+        onClickCapture={(event) => {
+          // Increase target size of control
+          if (event.target === event.currentTarget) {
+            localRef.current.focus({ preventScroll: true });
+          }
+        }}
+      >
+        {addonStart}
+        {control}
+        {addonEnd}
+      </div>
     </fieldset>
   ) : (
     control
