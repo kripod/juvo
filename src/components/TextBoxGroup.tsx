@@ -8,13 +8,13 @@ export interface TextBoxGroupProps {
 }
 
 export const TextBoxGroupAddonStartContext =
-  createContext<TextBoxGroupProps["addonStart"]>(null);
+  createContext<TextBoxGroupProps["addonStart"]>(undefined);
 
 export const TextBoxGroupAddonEndContext =
-  createContext<TextBoxGroupProps["addonEnd"]>(null);
+  createContext<TextBoxGroupProps["addonEnd"]>(undefined);
 
 export const TextBoxGroupDisabledContext =
-  createContext<TextBoxGroupProps["disabled"]>(false);
+  createContext<TextBoxGroupProps["disabled"]>(undefined);
 
 export function TextBoxGroup({
   addonStart,

@@ -25,14 +25,14 @@ export const Input = forwardRef(function Input(
   const addonStart = useContext(TextBoxGroupAddonStartContext);
   const addonEnd = useContext(TextBoxGroupAddonEndContext);
 
-  const grouped = addonStart != null || addonEnd != null;
-  const shape = shapeRaw ?? (!grouped ? "rectangle" : "pill");
+  const ungrouped = addonStart == null && addonEnd == null;
+  const shape = shapeRaw ?? (ungrouped ? "rectangle" : "pill");
 
   const control = (
     <input
       ref={localRef}
       className={clsx(
-        !grouped ?
+        ungrouped ?
           clsx(
             className,
             textBoxClassName({ size, shape }),
@@ -52,7 +52,7 @@ export const Input = forwardRef(function Input(
     />
   );
 
-  return grouped ?
+  return ungrouped ? control : (
       <fieldset
         disabled={groupDisabled}
         className={clsx(
@@ -82,5 +82,5 @@ export const Input = forwardRef(function Input(
           {addonEnd}
         </div>
       </fieldset>
-    : control;
+    );
 });
