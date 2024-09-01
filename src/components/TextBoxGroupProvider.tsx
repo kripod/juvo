@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-export interface TextBoxGroupProps {
+export interface TextBoxGroupProviderProps {
   addonStart?: React.ReactNode;
   addonEnd?: React.ReactNode;
   disabled?: boolean;
@@ -8,20 +8,20 @@ export interface TextBoxGroupProps {
 }
 
 export const TextBoxGroupAddonStartContext =
-  createContext<TextBoxGroupProps["addonStart"]>(undefined);
+  createContext<TextBoxGroupProviderProps["addonStart"]>(undefined);
 
 export const TextBoxGroupAddonEndContext =
-  createContext<TextBoxGroupProps["addonEnd"]>(undefined);
+  createContext<TextBoxGroupProviderProps["addonEnd"]>(undefined);
 
 export const TextBoxGroupDisabledContext =
-  createContext<TextBoxGroupProps["disabled"]>(undefined);
+  createContext<TextBoxGroupProviderProps["disabled"]>(undefined);
 
-export function TextBoxGroup({
+export function TextBoxGroupProvider({
   addonStart,
   addonEnd,
   disabled,
   children,
-}: TextBoxGroupProps) {
+}: TextBoxGroupProviderProps) {
   return (
     <TextBoxGroupAddonStartContext.Provider value={addonStart}>
       <TextBoxGroupAddonEndContext.Provider value={addonEnd}>

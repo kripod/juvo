@@ -18,6 +18,6 @@ export {
   type InputOutlinedProps,
 } from "./components/InputOutlined";
 export {
-  TextBoxGroup,
-  type TextBoxGroupProps,
-} from "./components/TextBoxGroup";
+  TextBoxGroupProvider,
+  type TextBoxGroupProviderProps,
+} from "./components/TextBoxGroupProvider";

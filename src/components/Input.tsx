@@ -6,7 +6,7 @@ import {
   TextBoxGroupAddonEndContext,
   TextBoxGroupAddonStartContext,
   TextBoxGroupDisabledContext,
-} from "./TextBoxGroup";
+} from "./TextBoxGroupProvider";
 
 export interface InputProps
   extends Omit<React.ComponentPropsWithRef<"input">, "size"> {
