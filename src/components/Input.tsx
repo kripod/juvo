@@ -26,7 +26,7 @@ export const Input = forwardRef(function Input(
   const addonEnd = useContext(TextBoxGroupAddonEndContext);
 
   const grouped = addonStart != null || addonEnd != null;
-  const shape = shapeRaw ?? (grouped ? "pill" : "rectangle");
+  const shape = shapeRaw ?? (!grouped ? "rectangle" : "pill");
 
   const control = (
     <input

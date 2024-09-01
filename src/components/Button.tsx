@@ -21,7 +21,7 @@ export const Button = forwardRef(function Button(
     size = "auto",
     iconStart,
     iconEnd,
-    shape = iconStart != null || iconEnd != null ? "pill" : "rectangle",
+    shape = iconStart == null && iconEnd == null ? "rectangle" : "pill",
     className,
     children,
     ...props
