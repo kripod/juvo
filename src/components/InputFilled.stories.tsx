@@ -74,17 +74,15 @@ export const WithinTextBoxGroupProvider = {
     ...Basic.args,
     placeholder: "Message",
   },
-  decorators: [
-    (Story) => (
-      <TextBoxGroupProvider
-        addonEnd={
-          <ButtonPrimary size="xs" shape="circle" color="accent" title="Send">
-            <PaperAirplaneIcon className="size-4" />
-          </ButtonPrimary>
-        }
-      >
-        <Story />
-      </TextBoxGroupProvider>
-    ),
-  ],
+  render: (props) => (
+    <TextBoxGroupProvider
+      addonEnd={
+        <ButtonPrimary size="xs" shape="circle" color="accent" title="Send">
+          <PaperAirplaneIcon className="size-4" />
+        </ButtonPrimary>
+      }
+    >
+      <InputFilled {...props} />
+    </TextBoxGroupProvider>
+  ),
 } satisfies Story;

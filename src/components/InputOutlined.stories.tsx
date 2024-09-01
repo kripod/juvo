@@ -77,15 +77,13 @@ export const WithinTextBoxGroupProvider = {
     ...Basic.args,
     placeholder: "Search…",
   },
-  decorators: [
-    (Story) => (
-      <TextBoxGroupProvider
-        addonStart={
-          <MagnifyingGlassIcon className="pointer-events-none size-6" />
-        }
-      >
-        <Story />
-      </TextBoxGroupProvider>
-    ),
-  ],
+  render: (props) => (
+    <TextBoxGroupProvider
+      addonStart={
+        <MagnifyingGlassIcon className="pointer-events-none size-6" />
+      }
+    >
+      <InputOutlined {...props} />
+    </TextBoxGroupProvider>
+  ),
 } satisfies Story;
