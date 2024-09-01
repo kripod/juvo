@@ -20,13 +20,13 @@ export const ButtonPlain = forwardRef(function ButtonPlain(
       className={clsx(
         className,
         "font-medium",
-        size === "xs" && "px-2",
-        size === "sm" && "px-2.5",
-        size === "md" && "px-3",
-        size === "lg" && "px-4",
-        color === "neutral" &&
-          "text-ui-neutral-950 active:bg-ui-neutral-300/25",
-        color === "accent" && "text-ui-accent-700 active:bg-ui-accent-300/25",
+        size === "xs" ? "px-2"
+        : size === "sm" ? "px-2.5"
+        : size === "md" ? "px-3"
+        : size === "lg" && "px-4",
+        color === "neutral" ?
+          "text-ui-neutral-950 active:bg-ui-neutral-300/25"
+        : color === "accent" && "text-ui-accent-700 active:bg-ui-accent-300/25",
       )}
       {...props}
     />

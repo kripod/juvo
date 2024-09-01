@@ -20,14 +20,13 @@ export const ButtonTertiary = forwardRef(function ButtonTertiary(
       className={clsx(
         className,
         "font-medium ring-1 ring-inset ring-ui-neutral-300",
-        size === "xs" && "px-2",
-        size === "sm" && "px-3",
-        size === "md" && "px-4",
-        size === "lg" && "px-6",
-        color === "neutral" &&
-          "text-ui-neutral-950 active:bg-ui-neutral-300/25",
-        color === "accent" && "text-ui-accent-700 active:bg-ui-accent-300/25",
-        color === "danger" && "text-ui-danger-700 active:bg-ui-danger-300/25",
+        size === "xs" ? "px-2"
+        : size === "sm" ? "px-3"
+        : size === "md" ? "px-4"
+        : size === "lg" && "px-6",
+        color === "neutral" ? "text-ui-neutral-950 active:bg-ui-neutral-300/25"
+        : color === "accent" ? "text-ui-accent-700 active:bg-ui-accent-300/25"
+        : color === "danger" && "text-ui-danger-700 active:bg-ui-danger-300/25",
       )}
       {...props}
     />

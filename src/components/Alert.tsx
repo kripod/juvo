@@ -26,12 +26,12 @@ export function Alert({ type = "info", children }: AlertProps) {
       role="alert"
       className={clsx(
         "flex gap-2 rounded-2xl p-4 text-base ring-1 ring-inset",
-        type === "info" && "bg-ui-info-100 text-ui-info-800 ring-ui-info-300",
-        type === "danger" &&
-          "bg-ui-danger-100 text-ui-danger-800 ring-ui-danger-300",
-        type === "success" &&
-          "bg-ui-success-100 text-ui-success-800 ring-ui-success-300",
-        type === "warning" &&
+        type === "info" ? "bg-ui-info-100 text-ui-info-800 ring-ui-info-300"
+        : type === "danger" ?
+          "bg-ui-danger-100 text-ui-danger-800 ring-ui-danger-300"
+        : type === "success" ?
+          "bg-ui-success-100 text-ui-success-800 ring-ui-success-300"
+        : type === "warning" &&
           "bg-ui-warning-100 text-ui-warning-800 ring-ui-warning-300",
       )}
     >

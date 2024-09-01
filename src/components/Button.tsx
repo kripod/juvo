@@ -37,21 +37,23 @@ export const Button = forwardRef(function Button(
       size !== "auto" &&
         clsx(
           "inline-flex items-center justify-center text-center",
-          size === "xs" && "gap-0.5",
-          size === "sm" && "gap-0.5",
-          size === "md" && "gap-1",
-          size === "lg" && "gap-1",
+          size === "xs" ? "gap-0.5"
+          : size === "sm" ? "gap-0.5"
+          : size === "md" ? "gap-1"
+          : size === "lg" && "gap-1",
         ),
     ),
     children: (
       <>
-        {iconStart != null ? (
+        {iconStart != null ?
           <span className="flex-none">{iconStart}</span>
-        ) : null}
+        : null}
         <span className={clsx(iconEnd != null && "flex-1 text-start")}>
           {children}
         </span>
-        {iconEnd != null ? <span className="flex-none">{iconEnd}</span> : null}
+        {iconEnd != null ?
+          <span className="flex-none">{iconEnd}</span>
+        : null}
       </>
     ),
     ...props,

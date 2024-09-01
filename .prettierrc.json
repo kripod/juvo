@@ -1,4 +1,5 @@
 {
   "plugins": ["prettier-plugin-tailwindcss"],
-  "tailwindFunctions": ["clsx"]
+  "tailwindFunctions": ["clsx"],
+  "experimentalTernaries": true
 }
