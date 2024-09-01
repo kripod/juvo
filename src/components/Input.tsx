@@ -21,9 +21,9 @@ export const Input = forwardRef(function Input(
   const localRef = useRef<HTMLInputElement>(null as never);
   useImperativeHandle(ref, () => localRef.current, []);
 
-  const groupDisabled = useContext(TextBoxGroupDisabledContext);
   const addonStart = useContext(TextBoxGroupAddonStartContext);
   const addonEnd = useContext(TextBoxGroupAddonEndContext);
+  const groupDisabled = useContext(TextBoxGroupDisabledContext);
 
   const ungrouped = addonStart == null && addonEnd == null;
   const shape = shapeRaw ?? (ungrouped ? "rectangle" : "pill");
