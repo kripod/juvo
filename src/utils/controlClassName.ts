@@ -1,7 +1,5 @@
 import { clsx } from "clsx/lite";
 
-import { parseBooleanish } from "./parseBooleanish";
-
 interface ControlProps {
   size: "auto" | "xs" | "sm" | "md" | "lg";
   shape: "rectangle" | "pill" | "square" | "circle";
@@ -30,16 +28,9 @@ export function controlClassName({ size, shape }: ControlProps) {
   );
 }
 
-interface TextBoxProps extends ControlProps {
-  "aria-invalid": React.AriaAttributes["aria-invalid"];
-}
-
-export function textBoxClassName({
-  "aria-invalid": ariaInvalid,
-  ...props
-}: TextBoxProps) {
+export function entryControlClassName(props: ControlProps) {
   return clsx(
     controlClassName(props),
-    parseBooleanish(ariaInvalid) && "ring-2 ring-inset ring-ui-danger-600",
+    "data-invalid:ring-2 data-invalid:ring-inset data-invalid:ring-ui-danger-600",
   );
 }

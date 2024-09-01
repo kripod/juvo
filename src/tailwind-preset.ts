@@ -15,9 +15,6 @@ export default {
   theme: {
     colors,
     extend: {
-      aria: {
-        invalid: 'invalid="true"',
-      },
       borderColor: ({ theme }) => ({
         DEFAULT: theme("colors.ui.neutral-200") as string,
       }),
@@ -28,6 +25,9 @@ export default {
             `oklch(var(${key}, ${value}) / <alpha-value>)`,
           ]),
         ),
+      },
+      data: {
+        invalid: 'invalid="true"',
       },
       transitionTimingFunction: {
         DEFAULT: defaultTheme.transitionTimingFunction.out,

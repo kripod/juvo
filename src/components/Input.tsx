@@ -3,7 +3,8 @@
 import { clsx } from "clsx/lite";
 import { forwardRef, useContext, useImperativeHandle, useRef } from "react";
 
-import { textBoxClassName } from "../utils/controlClassName";
+import { entryControlClassName } from "../utils/controlClassName";
+import { parseBooleanish } from "../utils/parseBooleanish";
 import {
   TextBoxGroupAddonEndContext,
   TextBoxGroupAddonStartContext,
@@ -35,16 +36,19 @@ export const Input = forwardRef(function Input(
   const ungrouped = addonStart == null && addonEnd == null;
   const shape = shapeRaw ?? (ungrouped ? "rectangle" : "pill");
 
+  const invalid = parseBooleanish(ariaInvalid);
+
   const control = (
     <input
       ref={localRef}
       aria-invalid={ariaInvalid}
+      data-invalid={ungrouped ? invalid : undefined}
       disabled={ungrouped ? disabled : undefined}
       className={clsx(
         ungrouped ?
           clsx(
             className,
-            textBoxClassName({ size, shape, "aria-invalid": ariaInvalid }),
+            entryControlClassName({ size, shape }),
             size === "sm" ? "px-2.5"
             : size === "md" ? "px-3"
             : size === "lg" && "px-4",
@@ -63,10 +67,11 @@ export const Input = forwardRef(function Input(
 
   return ungrouped ? control : (
       <fieldset
+        data-invalid={invalid}
         disabled={disabled}
         className={clsx(
           className,
-          textBoxClassName({ size, shape, "aria-invalid": ariaInvalid }),
+          entryControlClassName({ size, shape }),
           "overflow-hidden focus-within:outline focus-within:outline-2 focus-within:outline-offset-1 focus-within:outline-ui-accent-600 has-[:not(input):focus]:[outline:none]",
         )}
       >
