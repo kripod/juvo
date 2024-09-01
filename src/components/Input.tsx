@@ -7,7 +7,6 @@ import { textBoxClassName } from "../utils/controlClassName";
 import {
   TextBoxGroupAddonEndContext,
   TextBoxGroupAddonStartContext,
-  TextBoxGroupDisabledContext,
 } from "./TextBoxGroupProvider";
 
 export interface InputProps
@@ -17,7 +16,7 @@ export interface InputProps
 }
 
 export const Input = forwardRef(function Input(
-  { size = "md", shape: shapeRaw, className, ...props }: InputProps,
+  { size = "md", shape: shapeRaw, disabled, className, ...props }: InputProps,
   ref: React.ForwardedRef<HTMLInputElement>,
 ) {
   const localRef = useRef<HTMLInputElement>(null as never);
@@ -25,7 +24,6 @@ export const Input = forwardRef(function Input(
 
   const addonStart = useContext(TextBoxGroupAddonStartContext);
   const addonEnd = useContext(TextBoxGroupAddonEndContext);
-  const groupDisabled = useContext(TextBoxGroupDisabledContext);
 
   const ungrouped = addonStart == null && addonEnd == null;
   const shape = shapeRaw ?? (ungrouped ? "rectangle" : "pill");
@@ -33,6 +31,7 @@ export const Input = forwardRef(function Input(
   const control = (
     <input
       ref={localRef}
+      disabled={ungrouped ? disabled : undefined}
       className={clsx(
         ungrouped ?
           clsx(
@@ -56,7 +55,7 @@ export const Input = forwardRef(function Input(
 
   return ungrouped ? control : (
       <fieldset
-        disabled={groupDisabled}
+        disabled={disabled}
         className={clsx(
           className,
           textBoxClassName({ size, shape }),
@@ -69,7 +68,7 @@ export const Input = forwardRef(function Input(
             size === "sm" ? "px-2"
             : size === "md" ? "px-2"
             : size === "lg" && "px-3",
-            groupDisabled && "*:opacity-100",
+            disabled && "*:opacity-100",
           )}
           onPointerDown={(event) => {
             // Increase target size of control
