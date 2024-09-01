@@ -28,9 +28,12 @@ export function controlClassName({ size, shape }: ControlProps) {
   );
 }
 
-export function textBoxClassName(props: ControlProps) {
+export function textBoxClassName({
+  invalid,
+  ...props
+}: ControlProps & { invalid: boolean }) {
   return clsx(
     controlClassName(props),
-    "aria-invalid:ring-2 aria-invalid:ring-inset aria-invalid:ring-ui-danger-600",
+    invalid && "ring-2 ring-inset ring-ui-danger-600",
   );
 }

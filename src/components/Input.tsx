@@ -4,6 +4,7 @@ import { clsx } from "clsx/lite";
 import { forwardRef, useContext, useImperativeHandle, useRef } from "react";
 
 import { textBoxClassName } from "../utils/controlClassName";
+import { parseBooleanish } from "../utils/parseBooleanish";
 import {
   TextBoxGroupAddonEndContext,
   TextBoxGroupAddonStartContext,
@@ -16,7 +17,14 @@ export interface InputProps
 }
 
 export const Input = forwardRef(function Input(
-  { size = "md", shape: shapeRaw, disabled, className, ...props }: InputProps,
+  {
+    size = "md",
+    shape: shapeRaw,
+    "aria-invalid": ariaInvalid,
+    disabled,
+    className,
+    ...props
+  }: InputProps,
   ref: React.ForwardedRef<HTMLInputElement>,
 ) {
   const localRef = useRef<HTMLInputElement>(null as never);
@@ -28,15 +36,18 @@ export const Input = forwardRef(function Input(
   const ungrouped = addonStart == null && addonEnd == null;
   const shape = shapeRaw ?? (ungrouped ? "rectangle" : "pill");
 
+  const invalid = parseBooleanish(ariaInvalid);
+
   const control = (
     <input
       ref={localRef}
+      aria-invalid={ariaInvalid}
       disabled={ungrouped ? disabled : undefined}
       className={clsx(
         ungrouped ?
           clsx(
             className,
-            textBoxClassName({ size, shape }),
+            textBoxClassName({ size, shape, invalid }),
             size === "sm" ? "px-2.5"
             : size === "md" ? "px-3"
             : size === "lg" && "px-4",
@@ -58,7 +69,7 @@ export const Input = forwardRef(function Input(
         disabled={disabled}
         className={clsx(
           className,
-          textBoxClassName({ size, shape }),
+          textBoxClassName({ size, shape, invalid }),
           "overflow-hidden focus-within:outline focus-within:outline-2 focus-within:outline-offset-1 focus-within:outline-ui-accent-600 has-[:not(input):focus]:[outline:none]",
         )}
       >
