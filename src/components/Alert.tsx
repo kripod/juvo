@@ -8,6 +8,7 @@ import { clsx } from "clsx/lite";
 
 export interface AlertProps {
   type?: "info" | "danger" | "success" | "warning";
+  className?: string;
   children?: React.ReactNode;
 }
 
@@ -18,13 +19,14 @@ const iconByType = {
   warning: ExclamationTriangleIcon,
 } satisfies Record<NonNullable<AlertProps["type"]>, React.ComponentType>;
 
-export function Alert({ type = "info", children }: AlertProps) {
+export function Alert({ type = "info", className, children }: AlertProps) {
   const Icon = iconByType[type];
 
   return (
     <div
       role="alert"
       className={clsx(
+        className,
         "flex gap-2 rounded-2xl p-4 text-base ring-1 ring-inset",
         type === "info" ? "bg-ui-info-100 text-ui-info-800 ring-ui-info-300"
         : type === "danger" ?
