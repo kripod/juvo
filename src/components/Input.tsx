@@ -36,8 +36,6 @@ export const Input = forwardRef(function Input(
   const ungrouped = addonStart == null && addonEnd == null;
   const shape = shapeRaw ?? (ungrouped ? "rectangle" : "pill");
 
-  const invalid = parseBooleanish(ariaInvalid);
-
   const control = (
     <input
       ref={localRef}
@@ -47,7 +45,7 @@ export const Input = forwardRef(function Input(
         ungrouped ?
           clsx(
             className,
-            textBoxClassName({ size, shape, invalid }),
+            textBoxClassName({ size, shape, "aria-invalid": ariaInvalid }),
             size === "sm" ? "px-2.5"
             : size === "md" ? "px-3"
             : size === "lg" && "px-4",
@@ -69,7 +67,7 @@ export const Input = forwardRef(function Input(
         disabled={disabled}
         className={clsx(
           className,
-          textBoxClassName({ size, shape, invalid }),
+          textBoxClassName({ size, shape, "aria-invalid": ariaInvalid }),
           "overflow-hidden focus-within:outline focus-within:outline-2 focus-within:outline-offset-1 focus-within:outline-ui-accent-600 has-[:not(input):focus]:[outline:none]",
         )}
       >
