@@ -89,6 +89,7 @@ export const Colors = {
     <div className="flex flex-wrap gap-4">
       <ButtonPlain color="neutral">Neutral</ButtonPlain>
       <ButtonPlain color="accent">Accent</ButtonPlain>
+      <ButtonPlain color="danger">Danger</ButtonPlain>
     </div>
   ),
 } satisfies Story;

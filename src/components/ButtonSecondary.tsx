@@ -5,8 +5,7 @@ import { Button, type ButtonProps } from "./Button";
 
 export interface ButtonSecondaryProps extends ButtonProps {
   size?: "xs" | "sm" | "md" | "lg";
-  shape?: "rectangle" | "pill" | "square" | "circle";
-  color?: "neutral" | "danger";
+  color?: "neutral" | "accent" | "danger";
 }
 
 export const ButtonSecondary = forwardRef(function ButtonSecondary(
@@ -26,8 +25,10 @@ export const ButtonSecondary = forwardRef(function ButtonSecondary(
         : size === "lg" && "px-6",
         color === "neutral" ?
           "bg-ui-neutral-300/65 text-ui-neutral-950 active:bg-ui-neutral-300"
+        : color === "accent" ?
+          "bg-ui-accent-300/65 text-ui-accent-950 active:bg-ui-accent-300"
         : color === "danger" &&
-            "bg-ui-danger-300/65 text-ui-danger-950 active:bg-ui-danger-300",
+          "bg-ui-danger-300/65 text-ui-danger-950 active:bg-ui-danger-300",
       )}
       {...props}
     />

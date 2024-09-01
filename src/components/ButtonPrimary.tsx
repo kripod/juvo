@@ -5,8 +5,7 @@ import { Button, type ButtonProps } from "./Button";
 
 export interface ButtonPrimaryProps extends ButtonProps {
   size?: "xs" | "sm" | "md" | "lg";
-  shape?: "rectangle" | "pill" | "square" | "circle";
-  color?: "neutral" | "accent";
+  color?: "neutral" | "accent" | "danger";
 }
 
 export const ButtonPrimary = forwardRef(function ButtonPrimary(
@@ -26,8 +25,10 @@ export const ButtonPrimary = forwardRef(function ButtonPrimary(
         : size === "lg" && "px-6",
         color === "neutral" ?
           "bg-ui-neutral-900 text-ui-neutral-50 active:bg-ui-neutral-950"
-        : color === "accent" &&
-            "bg-ui-accent-700 text-ui-accent-50 active:bg-ui-accent-800",
+        : color === "accent" ?
+          "bg-ui-accent-700 text-ui-accent-50 active:bg-ui-accent-800"
+        : color === "danger" &&
+          "bg-ui-danger-700 text-ui-danger-50 active:bg-ui-danger-800",
       )}
       {...props}
     />

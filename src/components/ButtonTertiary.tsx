@@ -5,7 +5,6 @@ import { Button, type ButtonProps } from "./Button";
 
 export interface ButtonTertiaryProps extends ButtonProps {
   size?: "xs" | "sm" | "md" | "lg";
-  shape?: "rectangle" | "pill" | "square" | "circle";
   color?: "neutral" | "accent" | "danger";
 }
 

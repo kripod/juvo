@@ -5,8 +5,7 @@ import { Button, type ButtonProps } from "./Button";
 
 export interface ButtonPlainProps extends ButtonProps {
   size?: "xs" | "sm" | "md" | "lg";
-  shape?: "rectangle" | "pill" | "square" | "circle";
-  color?: "neutral" | "accent";
+  color?: "neutral" | "accent" | "danger";
 }
 
 export const ButtonPlain = forwardRef(function ButtonPlain(
@@ -24,9 +23,9 @@ export const ButtonPlain = forwardRef(function ButtonPlain(
         : size === "sm" ? "px-2.5"
         : size === "md" ? "px-3"
         : size === "lg" && "px-4",
-        color === "neutral" ?
-          "text-ui-neutral-950 active:bg-ui-neutral-300/25"
-        : color === "accent" && "text-ui-accent-700 active:bg-ui-accent-300/25",
+        color === "neutral" ? "text-ui-neutral-950 active:bg-ui-neutral-300/25"
+        : color === "accent" ? "text-ui-accent-700 active:bg-ui-accent-300/25"
+        : color === "danger" && "text-ui-danger-700 active:bg-ui-danger-300/25",
       )}
       {...props}
     />
