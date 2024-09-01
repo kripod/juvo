@@ -4,7 +4,6 @@ import { clsx } from "clsx/lite";
 import { forwardRef, useContext, useImperativeHandle, useRef } from "react";
 
 import { textBoxClassName } from "../utils/controlClassName";
-import { parseBooleanish } from "../utils/parseBooleanish";
 import {
   TextBoxGroupAddonEndContext,
   TextBoxGroupAddonStartContext,
