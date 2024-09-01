@@ -1,7 +1,10 @@
+import { PaperAirplaneIcon } from "@heroicons/react/16/solid";
 import type { Meta, StoryObj } from "@storybook/react";
 import { userEvent } from "@storybook/test";
 
+import { ButtonPrimary } from "./ButtonPrimary";
 import { InputFilled } from "./InputFilled";
+import { TextBoxGroupProvider } from "./TextBoxGroupProvider";
 
 const meta = {
   component: InputFilled,
@@ -63,4 +66,25 @@ export const Shapes = {
       <InputFilled shape="pill" placeholder="Pill" />
     </div>
   ),
+} satisfies Story;
+
+export const WithinTextBoxGroupProvider = {
+  ...Basic,
+  args: {
+    ...Basic.args,
+    placeholder: "Message",
+  },
+  decorators: [
+    (Story) => (
+      <TextBoxGroupProvider
+        addonEnd={
+          <ButtonPrimary size="xs" shape="circle" color="accent" title="Send">
+            <PaperAirplaneIcon className="size-4" />
+          </ButtonPrimary>
+        }
+      >
+        <Story />
+      </TextBoxGroupProvider>
+    ),
+  ],
 } satisfies Story;

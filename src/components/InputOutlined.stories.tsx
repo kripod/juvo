@@ -1,7 +1,9 @@
+import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import type { Meta, StoryObj } from "@storybook/react";
 import { userEvent } from "@storybook/test";
 
 import { InputOutlined } from "./InputOutlined";
+import { TextBoxGroupProvider } from "./TextBoxGroupProvider";
 
 const meta = {
   component: InputOutlined,
@@ -67,4 +69,23 @@ export const Shapes = {
       <InputOutlined shape="pill" placeholder="Pill" />
     </div>
   ),
+} satisfies Story;
+
+export const WithinTextBoxGroupProvider = {
+  ...Basic,
+  args: {
+    ...Basic.args,
+    placeholder: "Search…",
+  },
+  decorators: [
+    (Story) => (
+      <TextBoxGroupProvider
+        addonStart={
+          <MagnifyingGlassIcon className="pointer-events-none size-6" />
+        }
+      >
+        <Story />
+      </TextBoxGroupProvider>
+    ),
+  ],
 } satisfies Story;
