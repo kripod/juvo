@@ -1,3 +1,5 @@
+"use client";
+
 import { clsx } from "clsx/lite";
 import { forwardRef, useContext, useImperativeHandle, useRef } from "react";
 
