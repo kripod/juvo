@@ -1,7 +1,7 @@
 {
   "name": "juvo",
   "version": "0.0.0",
-  "description": "A design system based upon Tailwind CSS.",
+  "description": "Balanced design system built around the Harmony color palette",
   "keywords": [
     "design-system",
     "tailwindcss"
