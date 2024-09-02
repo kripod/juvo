@@ -51,9 +51,9 @@ export const Sizes = {
   ...Basic,
   render: () => (
     <div className="flex flex-col items-start gap-4">
-      <InputFilled size="sm" placeholder="Small" />
-      <InputFilled size="md" placeholder="Medium" />
-      <InputFilled size="lg" placeholder="Large" />
+      <InputFilled size="sm" placeholder="sm" />
+      <InputFilled size="md" placeholder="md" />
+      <InputFilled size="lg" placeholder="lg" />
     </div>
   ),
 } satisfies Story;

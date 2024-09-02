@@ -39,10 +39,10 @@ export const Sizes = {
   ...Basic,
   render: () => (
     <div className="flex flex-col items-start gap-4">
-      <ButtonPrimary size="xs">Extra small</ButtonPrimary>
-      <ButtonPrimary size="sm">Small</ButtonPrimary>
-      <ButtonPrimary size="md">Medium</ButtonPrimary>
-      <ButtonPrimary size="lg">Large</ButtonPrimary>
+      <ButtonPrimary size="xs">xs</ButtonPrimary>
+      <ButtonPrimary size="sm">sm</ButtonPrimary>
+      <ButtonPrimary size="md">md</ButtonPrimary>
+      <ButtonPrimary size="lg">lg</ButtonPrimary>
     </div>
   ),
 } satisfies Story;
