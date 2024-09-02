@@ -4,6 +4,9 @@
   "description": "Balanced design system built around the Harmony color palette",
   "keywords": [
     "design-system",
+    "components",
+    "accessibility",
+    "react",
     "tailwindcss"
   ],
   "homepage": "https://github.com/kripod/juvo#readme",
