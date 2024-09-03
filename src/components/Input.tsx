@@ -19,7 +19,7 @@ export interface InputProps
 export const Input = forwardRef(function Input(
   {
     size = "md",
-    shape: shapeRaw,
+    shape = "rectangle",
     "aria-invalid": ariaInvalid,
     disabled,
     className,
@@ -32,9 +32,7 @@ export const Input = forwardRef(function Input(
 
   const addonStart = useContext(TextBoxGroupAddonStartContext);
   const addonEnd = useContext(TextBoxGroupAddonEndContext);
-
   const ungrouped = addonStart == null && addonEnd == null;
-  const shape = shapeRaw ?? (ungrouped ? "rectangle" : "pill");
 
   const invalid = parseBooleanish(ariaInvalid);
 

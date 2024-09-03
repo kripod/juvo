@@ -72,6 +72,7 @@ export const WithinTextBoxGroupProvider = {
   ...Basic,
   args: {
     ...Basic.args,
+    shape: "pill",
     placeholder: "Message",
   },
   render: (props) => (
