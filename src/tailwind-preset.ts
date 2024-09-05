@@ -6,6 +6,7 @@ import plugin from "tailwindcss/plugin";
 import { darkTheme, lightTheme } from "./themes";
 
 export default {
+  darkMode: ["class", ".theme-dark"],
   theme: {
     colors,
     extend: {

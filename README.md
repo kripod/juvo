@@ -73,7 +73,6 @@ If using TypeScript, consider adopting [`@total-typescript/tsconfig`](https://gi
        path.join(path.dirname(require.resolve("juvo")), "**/*.js"),
      ],
      presets: [juvoPreset],
-     darkMode: ["class", ".theme-dark"],
    };
    ```
 

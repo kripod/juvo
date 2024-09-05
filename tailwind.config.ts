@@ -11,5 +11,4 @@ export default {
   future: {
     disableColorOpacityUtilitiesByDefault: true,
   },
-  darkMode: ["class", ".theme-dark"],
 } satisfies Config;
