@@ -8,5 +8,8 @@ export default {
     "./.storybook/**/*.{js,jsx,ts,tsx,mdx}",
   ],
   presets: [tailwindPreset],
+  future: {
+    disableColorOpacityUtilitiesByDefault: true,
+  },
   darkMode: ["class", ".theme-dark"],
 } satisfies Config;

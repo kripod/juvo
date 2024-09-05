@@ -6,12 +6,6 @@ import plugin from "tailwindcss/plugin";
 import { darkTheme, lightTheme } from "./themes";
 
 export default {
-  future: {
-    hoverOnlyWhenSupported: true,
-    respectDefaultRingColorOpacity: true,
-    disableColorOpacityUtilitiesByDefault: true,
-    relativeContentPathsByDefault: true,
-  },
   theme: {
     colors,
     extend: {
