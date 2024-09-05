@@ -73,10 +73,17 @@ If using TypeScript, consider adopting [`@total-typescript/tsconfig`](https://gi
        path.join(path.dirname(require.resolve("juvo")), "**/*.js"),
      ],
      presets: [juvoPreset],
+     darkMode: ["class", ".theme-dark"],
    };
    ```
 
    - Theme-dependent `color` tokens are exposed under the `ui-` prefix
+     - To switch between color themes, `.theme-dark` and `.theme-light` classes may be applied as-is or through the [`@apply` directive](https://tailwindcss.com/docs/functions-and-directives#apply):
+       ```css
+       @media (prefers-color-scheme: dark) {
+         @apply theme-dark;
+       }
+       ```
    - Transition timings are set to the `ease-out` function of Tailwind by default
 
 4. Add `src/styles.css` and import it from your app’s root:
