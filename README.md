@@ -8,7 +8,95 @@ Balanced design system built around the [Harmony color palette](https://github.c
 - [React Server Components](https://react.dev/reference/rsc/server-components) support
 - [React Hook Form](https://github.com/react-hook-form/react-hook-form) integration via `ref` prop for controls
 - Single container element for top-level UI components, allowing `className` to be prepended
-- [Utility-first CSS via Tailwind](https://tailwindcss.com/docs/utility-first)
+- [Utility-first CSS with Tailwind](https://tailwindcss.com/docs/utility-first)
+
+## Usage
+
+Firstly, install the package:
+
+```sh
+pnpm add juvo
+```
+
+Make sure to have all the non-optional peer dependencies available, as listed by:
+
+```sh
+npm view juvo peerDependencies peerDependenciesMeta
+```
+
+If using TypeScript, consider adopting [`@total-typescript/tsconfig`](https://github.com/total-typescript/tsconfig). Package entry points may fail to resolve otherwise.
+
+### With Tailwind CSS (recommended)
+
+1. Add build-time dependencies:
+
+   ```sh
+   pnpm add -D tailwindcss postcss postcss-preset-env
+   ```
+
+2. Set up `.postcssrc.json` in your project root, making sure to disable all logical properties and values plugins:
+
+   ```json
+   {
+     "plugins": {
+       "tailwindcss/nesting": "postcss-nesting",
+       "tailwindcss": {},
+       "postcss-preset-env": {
+         "features": {
+           "nesting-rules": false,
+           "float-clear-logical-values": false,
+           "logical-overflow": false,
+           "logical-overscroll-behavior": false,
+           "logical-properties-and-values": false,
+           "logical-resize": false,
+           "logical-viewport-units": false
+         }
+       }
+     }
+   }
+   ```
+
+   - Extensive browser support is provided via [Browserslist](https://github.com/browserslist/browserslist)
+   - The [official CSS Nesting syntax](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-nesting) is used over the [Sass-like one](https://github.com/postcss/postcss-nested)
+
+3. Configure `tailwind.config.js` in your project root, amending `content` as per [Tailwind’s framework guides](https://tailwindcss.com/docs/installation/framework-guides):
+
+   ```ts
+   import * as path from "node:path";
+
+   import juvoPreset from "juvo/tailwind-preset";
+
+   /** @type {import("tailwindcss").Config} */
+   export default {
+     content: [
+       "./src/**/*.{js,jsx,ts,tsx,mdx}",
+       path.join(path.dirname(require.resolve("juvo")), "**/*.js"),
+     ],
+     presets: [juvoPreset],
+   };
+   ```
+
+   - Theme-dependent `color` tokens are exposed under the `ui-` prefix
+   - Transition timings are set to the `ease-out` function of Tailwind by default
+
+4. Add `src/styles.css` and import it from your app’s root:
+
+   ```css
+   @import "tailwindcss/base";
+   @import "juvo/styles/base.css";
+
+   @import "tailwindcss/components";
+
+   @import "tailwindcss/utilities";
+   ```
+
+### Standalone
+
+Import styles from your app’s root:
+
+```ts
+import "juvo/styles/pregenerated.css";
+```
 
 ## Inspirations
 
