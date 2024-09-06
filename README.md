@@ -95,7 +95,9 @@ export default function App() {
      - To switch between color themes, apply `.theme-dark` and `.theme-light` classes as-is or through the [`@apply` directive](https://tailwindcss.com/docs/functions-and-directives#apply):
        ```css
        @media (prefers-color-scheme: dark) {
-         @apply theme-dark;
+         html {
+           @apply theme-dark;
+         }
        }
        ```
    - Transition timings are set to the `ease-out` function of Tailwind by default
