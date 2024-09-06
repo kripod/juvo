@@ -1,5 +1,11 @@
 # juvo
 
+## 0.2.1
+
+### Patch Changes
+
+- [`85509b8`](https://github.com/kripod/juvo/commit/85509b8d162a139db2b9392811fd9791a3c5f104) Thanks [@kripod](https://github.com/kripod)! - refactor: make `@evilmartians/harmony` a regular dependency
+
 ## 0.2.0
 
 ### Minor Changes
