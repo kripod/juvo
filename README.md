@@ -25,8 +25,6 @@ Firstly, install the package:
 pnpm add juvo
 ```
 
-If using TypeScript, consider adopting [`@total-typescript/tsconfig`](https://github.com/total-typescript/tsconfig). Package entry points may fail to resolve otherwise.
-
 Once the accompanying styles are loaded as shown below, components can be imported and used like:
 
 ```tsx
@@ -36,6 +34,8 @@ export default function App() {
   return <ButtonPrimary>Click me</ButtonPrimary>;
 }
 ```
+
+If using TypeScript, consider adopting [`@total-typescript/tsconfig`](https://github.com/total-typescript/tsconfig). Package entry points may fail to resolve otherwise.
 
 ### Standalone
 
