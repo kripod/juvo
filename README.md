@@ -15,6 +15,8 @@ Balanced design system built around the [Harmony color palette](https://github.c
 - Single container element for top-level UI components, allowing `className` to be prepended
 - [Utility-first CSS with Tailwind](https://tailwindcss.com/docs/utility-first)
 
+See also [inspirations](#inspirations) for more.
+
 ## Usage
 
 Firstly, install the package:
@@ -39,6 +41,14 @@ import { ButtonPrimary } from "juvo";
 export default function App() {
   return <ButtonPrimary>Click me</ButtonPrimary>;
 }
+```
+
+### Standalone
+
+Import styles from your app’s root:
+
+```ts
+import "juvo/styles/pregenerated.css";
 ```
 
 ### With Tailwind CSS (recommended)
@@ -112,14 +122,6 @@ export default function App() {
 
    @import "tailwindcss/utilities";
    ```
-
-### Standalone
-
-Import styles from your app’s root:
-
-```ts
-import "juvo/styles/pregenerated.css";
-```
 
 ## Inspirations
 
