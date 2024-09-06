@@ -4,6 +4,8 @@ Balanced design system built around the [Harmony color palette](https://github.c
 
 ## Principles
 
+/ˈju.vo/ means to assist, serve and delight. Key characteristics of this project are:
+
 - [WCAG 2.2](https://www.w3.org/TR/WCAG22/) compliance
 - [React Server Components](https://react.dev/reference/rsc/server-components) support
 - [React Hook Form](https://github.com/react-hook-form/react-hook-form) integration via `ref` prop for controls
@@ -25,6 +27,16 @@ npm view juvo peerDependencies peerDependenciesMeta
 ```
 
 If using TypeScript, consider adopting [`@total-typescript/tsconfig`](https://github.com/total-typescript/tsconfig). Package entry points may fail to resolve otherwise.
+
+Once the accompanying styles are loaded as shown below, components may be imported and used like:
+
+```tsx
+import { ButtonPrimary } from "juvo";
+
+export default function App() {
+  return <ButtonPrimary>Click me</ButtonPrimary>;
+}
+```
 
 ### With Tailwind CSS (recommended)
 
