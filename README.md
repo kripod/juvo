@@ -150,3 +150,7 @@ import "juvo/styles/pregenerated.css";
 - [The Component Gallery](https://component.gallery/) — Iain Bean
 - [UI Playbook](https://uiplaybook.dev/) — Rauno Freiberg
 - [UI & UX Design Tips](https://www.uidesign.tips/) — Jim Raptis
+
+## Contributing
+
+Please refer to the [contribution guidelines](./CONTRIBUTING.md) for details.
