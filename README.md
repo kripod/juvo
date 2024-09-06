@@ -2,6 +2,9 @@
 
 Balanced design system built around the [Harmony color palette](https://github.com/evilmartians/harmony)
 
+![npm version](https://img.shields.io/npm/v/juvo)
+![GitHub Sponsors](https://img.shields.io/github/sponsors/kripod)
+
 ## Principles
 
 /ˈju.vo/ means to assist, serve and delight. Key characteristics of this project are:
