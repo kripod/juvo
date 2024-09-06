@@ -28,7 +28,7 @@ npm view juvo peerDependencies peerDependenciesMeta
 
 If using TypeScript, consider adopting [`@total-typescript/tsconfig`](https://github.com/total-typescript/tsconfig). Package entry points may fail to resolve otherwise.
 
-Once the accompanying styles are loaded as shown below, components may be imported and used like:
+Once the accompanying styles are loaded as shown below, components can be imported and used like:
 
 ```tsx
 import { ButtonPrimary } from "juvo";
@@ -89,7 +89,7 @@ export default function App() {
    ```
 
    - Theme-dependent `color` tokens are exposed under the `ui-` prefix
-     - To switch between color themes, `.theme-dark` and `.theme-light` classes may be applied as-is or through the [`@apply` directive](https://tailwindcss.com/docs/functions-and-directives#apply):
+     - To switch between color themes, apply `.theme-dark` and `.theme-light` classes as-is or through the [`@apply` directive](https://tailwindcss.com/docs/functions-and-directives#apply):
        ```css
        @media (prefers-color-scheme: dark) {
          @apply theme-dark;
