@@ -21,10 +21,9 @@ Keep the scope of each pull request to **one** specific feature or fix.
 
 ### Workflow
 
-0. Assign related [issues] to yourself.
-1. Clone a fork of the 'main' branch and install all the required dependencies via `pnpm install`.
-2. Make changes to the codebase, running `pnpm dev` to see them in action.
-3. Open a new pull request, [referencing corresponding issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) if available.
+1. Clone a fork of the 'main' branch and set up all the required dependencies via `pnpm install`
+2. Make changes to the codebase, running `pnpm dev` to see them in action
+3. Open a new pull request, [referencing related issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) when available
 
 ## License
 
