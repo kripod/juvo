@@ -2,8 +2,8 @@
 
 Balanced design system built around the [Harmony color palette](https://github.com/evilmartians/harmony)
 
-![npm version](https://img.shields.io/npm/v/juvo)
-![GitHub Sponsors](https://img.shields.io/github/sponsors/kripod)
+[![npm version](https://img.shields.io/npm/v/juvo)](https://www.npmjs.com/package/juvo)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/kripod)](https://github.com/sponsors/kripod)
 
 ## Principles
 
