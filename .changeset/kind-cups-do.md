@@ -1,5 +1,5 @@
 ---
-"juvo": patch
+"juvo": minor
 ---
 
 chore: initial release
