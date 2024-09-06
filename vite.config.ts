@@ -17,7 +17,7 @@ export default defineConfig({
       entry: [
         `${rootDir}/mod.ts`,
         `${rootDir}/styles/base.css`,
-        `${rootDir}/styles/pregenerated.css`,
+        `${rootDir}/styles/standalone.css`,
         `${rootDir}/tailwind-preset.ts`,
       ],
       formats: ["es"],

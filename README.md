@@ -48,7 +48,7 @@ export default function App() {
 Import styles from your app’s root:
 
 ```ts
-import "juvo/styles/pregenerated.css";
+import "juvo/styles/standalone.css";
 ```
 
 ### With Tailwind CSS (recommended)

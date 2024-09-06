@@ -1,4 +1,4 @@
-@import "../src/styles/pregenerated.css";
+@import "../src/styles/standalone.css";
 
 @layer base {
   body {
