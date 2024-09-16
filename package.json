@@ -78,7 +78,7 @@
     "eslint-plugin-tailwindcss": "3.17.4",
     "husky": "9.1.5",
     "nano-staged": "0.8.0",
-    "postcss-preset-env": "10.0.2",
+    "postcss-preset-env": "10.0.3",
     "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.6",
     "react": "18.3.1",
