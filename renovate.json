@@ -4,6 +4,7 @@
   "packageRules": [
     {
       "matchUpdateTypes": "patch",
+      "matchCurrentVersion": ">=1",
       "automerge": true
     }
   ],
