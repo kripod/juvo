@@ -1,5 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:js-lib", "schedule:earlyMondays"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": "patch",
+      "automerge": true
+    }
+  ],
   "postUpdateOptions": ["pnpmDedupe"]
 }
