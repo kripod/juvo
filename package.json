@@ -86,7 +86,7 @@
     "rollup-preserve-directives": "1.1.2",
     "storybook": "8.2.9",
     "tailwindcss": "3.4.14",
-    "typescript": "5.5.4",
+    "typescript": "5.6.3",
     "vite": "5.4.6",
     "vite-plugin-dts": "4.2.1"
   },
