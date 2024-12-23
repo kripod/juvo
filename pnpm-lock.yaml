@@ -55,11 +55,11 @@ importers:
         specifier: 22.9.3
         version: 22.9.3
       '@types/react':
-        specifier: 18.3.16
-        version: 18.3.16
+        specifier: 18.3.18
+        version: 18.3.18
       '@types/react-dom':
         specifier: 18.3.5
-        version: 18.3.5(@types/react@18.3.16)
+        version: 18.3.5(@types/react@18.3.18)
       '@vitejs/plugin-react-swc':
         specifier: 3.7.2
         version: 3.7.2(vite@5.4.11(@types/node@22.9.3))
@@ -1290,8 +1290,8 @@ packages:
     peerDependencies:
       '@types/react': ^18.0.0
 
-  '@types/react@18.3.16':
-    resolution: {integrity: sha512-oh8AMIC4Y2ciKufU8hnKgs+ufgbA/dhPTACaZPM86AbwX9QwnFtSoPWEeRUj8fge+v6kFt78BXcDhAU1SrrAsw==}
+  '@types/react@18.3.18':
+    resolution: {integrity: sha512-t4yC+vtgnkYjNSKlFx1jkAhH8LgTo2N/7Qvi83kdEaUtMDiwpbLAktKDaAMlRcJ5eSxZkH74eEGt1ky31d7kfQ==}
 
   '@types/resolve@1.20.6':
     resolution: {integrity: sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ==}
@@ -4886,10 +4886,10 @@ snapshots:
       globby: 11.1.0
       read-yaml-file: 1.1.0
 
-  '@mdx-js/react@3.0.1(@types/react@18.3.16)(react@18.3.1)':
+  '@mdx-js/react@3.0.1(@types/react@18.3.18)(react@18.3.1)':
     dependencies:
       '@types/mdx': 2.0.13
-      '@types/react': 18.3.16
+      '@types/react': 18.3.18
       react: 18.3.1
 
   '@microsoft/api-extractor-model@7.29.8(@types/node@22.9.3)':
@@ -5074,12 +5074,12 @@ snapshots:
 
   '@storybook/addon-docs@8.3.6(storybook@8.3.6)':
     dependencies:
-      '@mdx-js/react': 3.0.1(@types/react@18.3.16)(react@18.3.1)
+      '@mdx-js/react': 3.0.1(@types/react@18.3.18)(react@18.3.1)
       '@storybook/blocks': 8.3.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.6)
       '@storybook/csf-plugin': 8.3.6(storybook@8.3.6)
       '@storybook/global': 5.0.0
       '@storybook/react-dom-shim': 8.3.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.6)
-      '@types/react': 18.3.16
+      '@types/react': 18.3.18
       fs-extra: 11.2.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -5552,11 +5552,11 @@ snapshots:
 
   '@types/range-parser@1.2.7': {}
 
-  '@types/react-dom@18.3.5(@types/react@18.3.16)':
+  '@types/react-dom@18.3.5(@types/react@18.3.18)':
     dependencies:
-      '@types/react': 18.3.16
+      '@types/react': 18.3.18
 
-  '@types/react@18.3.16':
+  '@types/react@18.3.18':
     dependencies:
       '@types/prop-types': 15.7.12
       csstype: 3.1.3
